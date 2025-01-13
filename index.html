@@ -72,6 +72,25 @@
             max-width: 800px;
         }
 
+        #about-me {
+            display: flex;
+            align-items: flex-start;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        #about-me img {
+            max-width: 150px;
+            height: auto;
+            border-radius: 50%;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        #about-me div {
+            flex: 1;
+            text-align: justify;
+        }
+
         #contact {
             padding-bottom: 60px; /* Ensure spacing before the footer */
         }
@@ -120,6 +139,16 @@
 
             footer {
                 padding: 0.5rem 0;
+            }
+
+            #about-me {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+
+            #about-me img {
+                margin-bottom: 20px;
             }
         }
     </style>
@@ -203,16 +232,4 @@
     <!-- Contact Section -->
     <section id="contact">
         <h2>Contact</h2>
-        <ul>
-            <li>Email: <a href="mailto:pramod.adhikari@uwyo.edu">pramod.adhikari@uwyo.edu</a></li>
-            <li>LinkedIn: <a href="https://www.linkedin.com/in/pramod-adhikari-ph-d-773a276a/">https://www.linkedin.com/in/pramod-adhikari-ph-d-773a276a/</a></li>
-            <li>ResearchGate: <a href="https://www.researchgate.net/profile/Pramod-Adhikari">https://www.researchgate.net/profile/Pramod-Adhikari</a></li>
-            <li>ORCID: <a href="https://orcid.org/0000-0000-0000-0000" target="_blank">https://orcid.org/0000-0000-0000-0000</a></li>
-        </ul>
-    </section>
-
-    <footer>
-        <p>&copy; 2025 Pramod Adhikari. All Rights Reserved.</p>
-    </footer>
-</body>
-</html>
+        <
