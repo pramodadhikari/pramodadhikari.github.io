@@ -6,7 +6,6 @@
     <title>Research - Pramod Adhikari</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <style>
-        /* Include the same styles as the home page */
         body {
             font-family: Arial, sans-serif;
             margin: 0;
@@ -14,107 +13,87 @@
             line-height: 1.6;
             background-color: #f4f4f9;
         }
-
         header {
             background: url('images/website_background_image.jpeg') no-repeat center center/cover;
             color: #fff;
             text-align: center;
-            padding-top: 190px;
-            padding-bottom: 10px;
-            position: relative;
+            padding: 120px 20px 20px;
         }
-
         header h1 {
-            font-size: 3rem;
-            margin: 0;
+            font-size: 2.5rem;
         }
-
         header p {
-            font-size: 1.5rem;
-            margin: 10px 0;
+            font-size: 1.2rem;
         }
-
-        .social-icons {
-            margin: 20px 0;
-        }
-
         .social-icons a {
             color: #fff;
             margin: 0 10px;
-            font-size: 1.5rem;
-            text-decoration: none;
+            font-size: 1.2rem;
         }
-
         nav ul {
             display: flex;
+            flex-wrap: wrap;
             justify-content: center;
             list-style: none;
-            padding: 10px 0;
+            padding: 10px;
             margin: 0;
             background-color: #2e86c1;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             border-radius: 8px;
         }
-
         nav ul li {
-            margin: 0 20px;
+            margin: 0 10px;
         }
-
         nav ul li a {
             text-decoration: none;
             color: #fff;
-            font-weight: bold;
-            font-size: 1.2rem;
-            padding: 10px 15px;
+            padding: 8px 12px;
             border-radius: 5px;
-            transition: background-color 0.3s;
         }
-
         nav ul li a:hover {
             background-color: #0056b3;
         }
-
         section {
-            padding: 2rem 1rem;
+            padding: 20px;
             margin: 0 auto;
-            margin-left: 4rem;
-            margin-right: 4rem;
+            max-width: 800px;
         }
-
-                #plain-language-summary {
+        #plain-language-summary {
             display: flex;
-            align-items: flex-start; /* Align text and image at the top */
-            gap: 20px; /* Space between image and text */
-            margin-top: 20px; /* Space above section */
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-top: 20px;
         }
-
         #plain-language-summary img {
-            max-width: 400px; /* Full image width */
-            height: auto; /* Maintain aspect ratio */
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Shadow for aesthetics */
-            position: relative;
+            max-width: 100%;
+            height: auto;
         }
-
         #plain-language-summary div {
-            flex: 1; /* Ensure text takes up remaining space */
-            text-align: justify; /* Improve readability */
+            flex: 1;
+            text-align: justify;
         }
-
-        #plain-language-summary .source {
-            font-size: 0.8rem; /* Reduced font size */
-            color: #555;
-            position: absolute;
-            bottom: 0;
-            right: 0;
-        }
-
         footer {
             text-align: center;
-            padding: 1rem 0;
+            padding: 10px 0;
             background: #333;
             color: #fff;
-            margin-top: 20px;
-            position: relative;
+        }
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+            header p {
+                font-size: 1rem;
+            }
+            .social-icons a {
+                font-size: 1rem;
+            }
+            nav ul {
+                flex-direction: column;
+                padding: 0;
+            }
+            nav ul li {
+                margin: 5px 0;
+            }
         }
     </style>
 </head>
@@ -128,7 +107,6 @@
             <a href="https://scholar.google.com/citations?user=QLI8ZaMAAAAJ&hl=en" target="_blank"><i class="fas fa-graduation-cap"></i></a>
         </div>
     </header>
-
     <nav>
         <ul>
             <li><a href="index.html">Home</a></li>
@@ -138,29 +116,23 @@
             <li><a href="index.html#contact">Contact</a></li>
         </ul>
     </nav>
-
-      <!-- Research Section -->
     <section id="research">
         <h2>Research</h2>
         <ul>
-            <li> Regional climate modeling and dynamically downscaling climate models</li>
-            <li> Impact of warming climate on water availability and mountain Hydroclimate </li>
-            <li> Extreme Events </li>
-            <li> Aerosol-cloud-precipitation interaction </li>
-            <li> Advanced atmospheric/climate data analysis</li>
+            <li>Regional climate modeling and dynamically downscaling climate models</li>
+            <li>Impact of warming climate on water availability and mountain hydroclimate</li>
+            <li>Extreme events</li>
+            <li>Aerosol-cloud-precipitation interaction</li>
+            <li>Advanced atmospheric/climate data analysis</li>
         </ul>
-        <h3>Plain Language Summary of my PhD work</h3>
+        <h3>Plain Language Summary of My PhD Work</h3>
         <div id="plain-language-summary">
             <img src="images/graphical_abstract_phd.png" alt="Graphical Abstract">
             <div>
-                <p>
-                    My PhD research explored the impacts of atmospheric aerosols (natural and anthropogenic) on precipitation and cloud dynamics over the Himalayas, emphasizing their implications for regional hydroclimate and water resources. Using satellite data, reanalysis datasets, and high-resolution (3 km) WRF-Chem simulations, we examine aerosol effects across daily to interannual scales and specific dust transport events. Results reveal that aerosols enhance cloud vertical development, convection, and precipitation in polluted conditions, significantly altering the precipitation intensity and frequency. It also modulates the freezing level height and can play a role in shifting the snowline upward and reducing the snow-to-rain ratio. Dust aerosols transported from distant sources intensify precipitation and convective processes over the Himalayas. Also, anthropogenic aerosols modulated orographic precipitation differently across elevations, amplifying heavy precipitation below 2000 m but suppressing it above. These findings highlight the critical role of aerosols in shaping the Himalayan hydrology and elevational precipitation patterns, with implications for extreme weather events and water resource management.
-                </p>
+                <p>My PhD research explored the impacts of atmospheric aerosols...</p>
             </div>
         </div>
-        
     </section>
-
     <footer>
         <p>&copy; 2025 Pramod Adhikari. All Rights Reserved.</p>
     </footer>
