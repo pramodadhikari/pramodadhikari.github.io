@@ -97,7 +97,7 @@
 
         #plain-language-summary {
             display: flex;
-            align-items: flex-start;
+            align-items: flex-start; /* Align text and image at the top */
             gap: 20px; /* Space between image and text */
             margin-top: 20px; /* Space above section */
         }
@@ -106,11 +106,19 @@
             max-width: 400px; /* Full image width */
             height: auto; /* Maintain aspect ratio */
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Shadow for aesthetics */
+            position: relative;
         }
 
         #plain-language-summary div {
             flex: 1; /* Ensure text takes up remaining space */
             text-align: justify; /* Improve readability */
+        }
+
+        #plain-language-summary .source {
+            font-size: 0.9rem;
+            color: #555;
+            text-align: right;
+            margin-top: 10px;
         }
 
         #contact {
@@ -216,14 +224,7 @@
         <div id="about-me">
             <img src="images/personal_photo.jpg" alt="Pramod Adhikari">
             <div>
-                <p>I am an atmospheric/climate scientist focused on the regional aspects of climate change over the mountain environment. 
-                My doctorate research emphasized understanding the role of natural and anthropogenic aerosols in modulating cloud properties, regional and elevation-dependent precipitation distribution and intensity, and vertical and surface temperature distribution over the Central Himalayas, which are crucial for the regional hydroclimate. 
-                I have a broad interest in understanding the impact of climate change on the regional and local levels using satellite-based observational datasets, reanalysis, and numerical modeling. 
-                Currently, I am a postdoctoral researcher at the University of Wyoming, contributing to the WyACT (Wyoming Anticipating Climate Transitions) project.  
-                My role involves collecting CMIP6 climate model guidance for the Interior western US through the development and validation of dynamically downscaled historical simulations. 
-                This work is instrumental in running our standard Regional Climate Model, the output of which will be used for applied climate change impact studies. 
-                Additionally, the downscaled modeling output will be used by hydrologists and ecologists for collaborative modeling to understand the impact of future climate change approximately 40 years from now. 
-                </p>
+                <p> I am an atmospheric and climate scientist specializing in the regional aspects of climate change in mountain environments. My doctoral research focused on understanding the role of natural and anthropogenic aerosols in influencing cloud properties and the distribution and intensity of regional and elevation-dependent precipitation over the Himlayas. I also examined vertical and surface temperature distribution over the Central Himalayas, which is crucial for the regional hydroclimate. I have a broad interest in assessing the impact of climate change at both regional and local levels, utilizing satellite-based observational datasets, reanalysis, and regional numerical modeling. Currently, I am a postdoctoral researcher at the University of Wyoming, contributing to the WyACT (Wyoming Anticipating Climate Transitions) project. My role involves collecting guidance from CMIP6 climate models for the interior western United States by developing and validating dynamically downscaled historical simulations. This work is critical for running our standard Regional Climate Model, the output of which will be used for applied climate change impact studies. Additionally, the downscaled modeling output will support hydrologists and ecologists in collaborative modeling efforts, helping to understand the impacts of future climate change approximately 40 years from now.</p>
                 <p><a href="cv/Adhikari_CV.pdf" target="_blank">My CV</a></p>
             </div>
         </div>
@@ -253,8 +254,13 @@
         <div id="plain-language-summary">
             <img src="images/graphical_abstract_phd.png" alt="Graphical Abstract">
             <div>
-                <p>My PhD research explored the impacts of atmospheric aerosols (natural and anthropogenic) on precipitation and cloud dynamics over the Himalayas, emphasizing their implications for regional hydroclimate and water resources. Using satellite data, reanalysis datasets, and high-resolution (3 km) WRF-Chem simulations, we examine aerosol effects across daily to interannual scales and specific dust transport events. Results reveal that aerosols enhance cloud vertical development, convection, and precipitation in polluted conditions, significantly altering the precipitation intensity and frequency. It also modulates the freezing level height and can play a role in shifting the snowline upward and reducing the snow-to-rain ratio. Dust aerosols transported from distant sources intensify precipitation and convective processes over the Himalayas. Also, anthropogenic aerosols modulated orographic precipitation differently across elevations, amplifying heavy precipitation below 2000 m but suppressing it above. These findings highlight the critical role of aerosols in shaping the Himalayan hydrology and elevational precipitation patterns, with implications for extreme weather events and water resource management.</p>
+                <p>
+                    My PhD research explored the impacts of atmospheric aerosols (natural and anthropogenic) on precipitation and cloud dynamics over the Himalayas, emphasizing their implications for regional hydroclimate and water resources. Using satellite data, reanalysis datasets, and high-resolution (3 km) WRF-Chem simulations, we examine aerosol effects across daily to interannual scales and specific dust transport events. Results reveal that aerosols enhance cloud vertical development, convection, and precipitation in polluted conditions, significantly altering the precipitation intensity and frequency. It also modulates the freezing level height and can play a role in shifting the snowline upward and reducing the snow-to-rain ratio. Dust aerosols transported from distant sources intensify precipitation and convective processes over the Himalayas. Also, anthropogenic aerosols modulated orographic precipitation differently across elevations, amplifying heavy precipitation below 2000 m but suppressing it above. These findings highlight the critical role of aerosols in shaping the Himalayan hydrology and elevational precipitation patterns, with implications for extreme weather events and water resource management.
+                </p>
             </div>
+        </div>
+        <div class="source">
+            Source: <a href="https://doi.org/10.1016/j.aeaoa.2022.100179" target="_blank">Adhikari and Mejia, 2022</a>
         </div>
     </section>
 
@@ -264,8 +270,8 @@
         <ul>
             <li><a href="https://doi.org/10.1175/JHM-D-24-0063.1"> Adhikari, P., Geerts, B., Rahimi-Esfarjani, S., Smith, K., Shuman, B. N., & Schneider, T. L. (2024). Evaluation of the mountain hydroclimate across the western United States in dynamically downscaled climate models. Journal of Hydrometeorology</a></li> 
             <li><a href="https://doi.org/10.5194/acp-23-1019-2023"> Adhikari, P., Mejia, J. F. (2023). Aerosol–precipitation elevation dependence over the central Himalayas using cloud-resolving WRF-Chem numerical modeling. Atmospheric Chemistry and Physics </a></li> 
-            <li><a href="https://doi.org/10.1007/s00382-021-05710-2"> Adhikari, P., Mejia, J. F. (2021). Influence of aerosols on clouds, precipitation and freezing level height over the foothills of the Himalayas during the Indian summer monsoon. Climate Dynamics </a></li> 
-            <li><a href="https://doi.org/10.1016/j.aeaoa.2022.100179"> Adhikari, P., & Mejia, J. F. (2022). Impact of transported dust aerosols on precipitation over the Nepal Himalayas using convection-permitting WRF-Chem simulation. Atmospheric Environment: X </a></li> 
+            <li><a href="https://doi.org/10.1016/j.aeaoa.2022.100179"> Adhikari, P., & Mejia, J. F. (2022). Impact of transported dust aerosols on precipitation over the Nepal Himalayas using convection-permitting WRF-Chem simulation. Atmospheric Environment: X </a></li>  
+            <li><a href="https://doi.org/10.1007/s00382-021-05710-2"> Adhikari, P., Mejia, J. F. (2021). Influence of aerosols on clouds, precipitation and freezing level height over the foothills of the Himalayas during the Indian summer monsoon. Climate Dynamics </a></li>   
         </ul>
         <ul>
             <li><a href="https://scholar.google.com/citations?user=QLI8ZaMAAAAJ&hl=en">My Google Scholar</a></li>
