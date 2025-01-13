@@ -81,6 +81,33 @@
             margin-right: 4rem;
         }
 
+                #plain-language-summary {
+            display: flex;
+            align-items: flex-start; /* Align text and image at the top */
+            gap: 20px; /* Space between image and text */
+            margin-top: 20px; /* Space above section */
+        }
+
+        #plain-language-summary img {
+            max-width: 400px; /* Full image width */
+            height: auto; /* Maintain aspect ratio */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Shadow for aesthetics */
+            position: relative;
+        }
+
+        #plain-language-summary div {
+            flex: 1; /* Ensure text takes up remaining space */
+            text-align: justify; /* Improve readability */
+        }
+
+        #plain-language-summary .source {
+            font-size: 0.8rem; /* Reduced font size */
+            color: #555;
+            position: absolute;
+            bottom: 0;
+            right: 0;
+        }
+
         footer {
             text-align: center;
             padding: 1rem 0;
