@@ -6,6 +6,7 @@
     <title>Pramod Adhikari, PhD - Personal Website</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <style>
+        /* General Styles */
         body {
             font-family: Arial, sans-serif;
             margin: 0;
@@ -13,30 +14,82 @@
             line-height: 1.6;
             background-color: #f4f4f9;
         }
+
+        /* Header Section */
         header {
-            background: #333;
+            background: url('images/website_background_image.jpeg') no-repeat center center/cover;
             color: #fff;
-            padding: 1rem 0;
             text-align: center;
+            padding: 100px 20px;
+            position: relative;
         }
+
+        header h1 {
+            font-size: 3rem;
+            margin: 0;
+        }
+
+        header p {
+            font-size: 1.5rem;
+            margin: 10px 0;
+        }
+
+        /* Icons Section */
+        .social-icons {
+            margin: 20px 0;
+        }
+
+        .social-icons a {
+            color: white;
+            margin: 0 10px;
+            font-size: 1.5rem;
+            text-decoration: none;
+        }
+
+        .social-icons a:hover {
+            color: #007BFF;
+        }
+
+        /* Navigation Bar */
         nav {
-            text-align: center;
-            margin: 1rem 0;
+            background: #fff;
+            padding: 10px 0;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
-        nav a {
-            margin: 0 1rem;
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        nav ul li {
+            margin: 0 20px;
+        }
+
+        nav ul li a {
             text-decoration: none;
             color: #333;
             font-weight: bold;
+            padding: 5px 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
         }
-        nav a:hover {
-            color: #007BFF;
+
+        nav ul li a:hover {
+            background-color: #007BFF;
+            color: white;
         }
+
+        /* Section Styles */
         section {
             padding: 2rem;
             margin: 0 auto;
             max-width: 800px;
         }
+
         footer {
             text-align: center;
             padding: 1rem 0;
@@ -49,20 +102,31 @@
     </style>
 </head>
 <body>
+    <!-- Header Section -->
     <header>
         <h1>Pramod Adhikari</h1>
-        <p> Climate/Atmospheric Scientist | Post-Doctoral Researcher </p>
+        <p>Ph.D. | Atmospheric Science Researcher</p>
+        <div class="social-icons">
+            <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="https://researchgate.net" target="_blank"><i class="fab fa-researchgate"></i></a>
+            <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="https://scholar.google.com" target="_blank"><i class="fas fa-graduation-cap"></i></a>
+        </div>
     </header>
 
+    <!-- Navigation Menu -->
     <nav>
-        <a href="#about">About</a>
-        <a href="#academic">Academic Achievements</a>
-        <a href="#research">Research Interests</a>
-        <a href="#publications">Publications</a>
-        <a href="#contact">Contact</a>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#academic">Academic Achievements</a></li>
+            <li><a href="#research">Research</a></li>
+            <li><a href="#publications">Publications</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
     </nav>
 
-    <section id="about">
+    <!-- Home Section -->
+    <section id="home">
         <h2>About Me</h2>
         <p>I am an atmospheric/climate scientist focused on the regional aspects of climate change over the mountain environment. 
 My doctorate research emphasized understanding the role of natural and anthropogenic aerosols in modulating cloud properties, regional and elevation-dependent precipitation distribution and intensity, and vertical and surface temperature distribution over the Central Himalayas, which are crucial for the regional hydroclimate. 
@@ -72,21 +136,21 @@ My role involves collecting CMIP6 climate model guidance for the Interior west
 This work is instrumental in running our standard Regional Climate Model, the output of which will be used for applied climate change impact studies. 
 Additionally, the downscaled modeling output will be used by hydrologists and ecologists for collaborative modeling to understand the impact of future climate change approximately 40 years from now. 
 </p>
-        <p>My CV: <a href="cv/Adhikari_CV.pdf" target="_blank">Adhikari CV</a></p>
     </section>
 
+    <!-- Academic Achievements Section -->
     <section id="academic">
         <h2>Academic Achievements</h2>
         <ul>
             <li>PhD in Atmospheric Sciences,  University of Nevada Reno (2018-2022)</li>
             <li>MS in Atmospheric Sciences,  University of Nevada Reno (2015-2017)</li>
             <li>MS in Physics,  Tribhuvan University (2011-2015)</li>
-            
         </ul>
     </section>
 
+    <!-- Research Section -->
     <section id="research">
-        <h2>Research Interests</h2>
+        <h2>Research</h2>
         <p>My primary interests include:</p>
         <ul>
             <li>Regional climate modeling and downscaling</li>
@@ -95,32 +159,29 @@ Additionally, the downscaled modeling output will be used by hydrologists and ec
         </ul>
     </section>
 
-    
+    <!-- Publications Section -->
     <section id="publications">
         <h2>Publications</h2>
-        <p> 
         <ul>
             <li><a href="https://doi.org/10.1175/JHM-D-24-0063.1"> Adhikari, P., Geerts, B., Rahimi-Esfarjani, S., Smith, K., Shuman, B. N., & Schneider, T. L. (2024). Evaluation of the mountain hydroclimate across the western United States in dynamically downscaled climate models. Journal of Hydrometeorology</a></li> 
             <li><a href="https://doi.org/10.5194/acp-23-1019-2023"> Adhikari, P., Mejia, J. F. (2023). Aerosol–precipitation elevation dependence over the central Himalayas using cloud-resolving WRF-Chem numerical modeling. Atmospheric Chemistry and Physics </a></li> 
             <li><a href="https://doi.org/10.1007/s00382-021-05710-2"> Adhikari, P., Mejia, J. F. (2021). Influence of aerosols on clouds, precipitation and freezing level height over the foothills of the Himalayas during the Indian summer monsoon. Climate Dynamics </a></li> 
             <li><a href="https://doi.org/10.1016/j.aeaoa.2022.100179"> Adhikari, P., & Mejia, J. F. (2022). Impact of transported dust aerosols on precipitation over the Nepal Himalayas using convection-permitting WRF-Chem simulation. Atmospheric Environment: X </a></li> 
-        <ul>
-        <ul>
-        <li><a href="https://scholar.google.com/citations?user=QLI8ZaMAAAAJ&hl=en">See my Google Scholar for full Publication list</a></li>
         </ul>
-        </p>
+        <ul>
+            <li><a href="https://scholar.google.com/citations?user=QLI8ZaMAAAAJ&hl=en">Google Scholar</a></li>
+        </ul>
     </section>
 
+    <!-- Contact Section -->
     <section id="contact">
         <h2>Contact</h2>
-        <p>
-            <ul>
-                <li>Email: <a href="mailto:pramod.adhikari@uwyo.edu">pramod.adhikari@uwyo.edu</a></li>
-                <li>LinkedIn: <a href="https://www.linkedin.com/in/pramod-adhikari-ph-d-773a276a/">https://www.linkedin.com/in/pramod-adhikari-ph-d-773a276a/</a></li>
-                <li>ResearchGate: <a href="https://www.researchgate.net/profile/Pramod-Adhikari">https://www.researchgate.net/profile/Pramod-Adhikari</a></li>
-                <li>ORCID: <a href="https://orcid.org/0000-0000-0000-0000" target="_blank">https://orcid.org/0000-0000-0000-0000</a></li>
-            </ul>
-        </p>
+        <ul>
+            <li>Email: <a href="mailto:pramod.adhikari@uwyo.edu">pramod.adhikari@uwyo.edu</a></li>
+            <li>LinkedIn: <a href="https://www.linkedin.com/in/pramod-adhikari-ph-d-773a276a/">https://www.linkedin.com/in/pramod-adhikari-ph-d-773a276a/</a></li>
+            <li>ResearchGate: <a href="https://www.researchgate.net/profile/Pramod-Adhikari">https://www.researchgate.net/profile/Pramod-Adhikari</a></li>
+            <li>ORCID: <a href="https://orcid.org/0000-0000-0000-0000" target="_blank">https://orcid.org/0000-0000-0000-0000</a></li>
+        </ul>
     </section>
 
     <footer>
