@@ -6,7 +6,6 @@
     <title>Publications - Pramod Adhikari</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <style>
-        /* Include the same styles as the home page */
         body {
             font-family: Arial, sans-serif;
             margin: 0;
@@ -14,80 +13,73 @@
             line-height: 1.6;
             background-color: #f4f4f9;
         }
-
         header {
             background: url('images/website_background_image.jpeg') no-repeat center center/cover;
             color: #fff;
             text-align: center;
-            padding-top: 190px;
-            padding-bottom: 10px;
-            position: relative;
+            padding: 120px 20px 20px;
         }
-
         header h1 {
-            font-size: 3rem;
-            margin: 0;
+            font-size: 2.5rem;
         }
-
         header p {
-            font-size: 1.5rem;
-            margin: 10px 0;
+            font-size: 1.2rem;
         }
-
-        .social-icons {
-            margin: 20px 0;
-        }
-
         .social-icons a {
             color: #fff;
             margin: 0 10px;
-            font-size: 1.5rem;
-            text-decoration: none;
+            font-size: 1.2rem;
         }
-
         nav ul {
             display: flex;
+            flex-wrap: wrap;
             justify-content: center;
             list-style: none;
-            padding: 10px 0;
+            padding: 10px;
             margin: 0;
             background-color: #2e86c1;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             border-radius: 8px;
         }
-
         nav ul li {
-            margin: 0 20px;
+            margin: 0 10px;
         }
-
         nav ul li a {
             text-decoration: none;
             color: #fff;
-            font-weight: bold;
-            font-size: 1.2rem;
-            padding: 10px 15px;
+            padding: 8px 12px;
             border-radius: 5px;
-            transition: background-color 0.3s;
         }
-
         nav ul li a:hover {
             background-color: #0056b3;
         }
-
         section {
-            padding: 2rem 1rem;
+            padding: 20px;
             margin: 0 auto;
-            margin-left: 4rem;
-            margin-right: 4rem;
+            max-width: 800px;
         }
-
         footer {
             text-align: center;
-            padding: 1rem 0;
+            padding: 10px 0;
             background: #333;
             color: #fff;
-            margin-top: 20px;
-            position: relative;
+        }
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+            header p {
+                font-size: 1rem;
+            }
+            .social-icons a {
+                font-size: 1rem;
+            }
+            nav ul {
+                flex-direction: column;
+                padding: 0;
+            }
+            nav ul li {
+                margin: 5px 0;
+            }
         }
     </style>
 </head>
@@ -101,7 +93,6 @@
             <a href="https://scholar.google.com/citations?user=QLI8ZaMAAAAJ&hl=en" target="_blank"><i class="fas fa-graduation-cap"></i></a>
         </div>
     </header>
-
     <nav>
         <ul>
             <li><a href="index.html">Home</a></li>
@@ -111,19 +102,8 @@
             <li><a href="index.html#contact">Contact</a></li>
         </ul>
     </nav>
-
     <section>
         <h2>Publications</h2>
         <ul>
-            <li><a href="https://doi.org/10.1175/JHM-D-24-0063.1"> Adhikari, P., Geerts, B., Rahimi-Esfarjani, S., Smith, K., Shuman, B. N., & Schneider, T. L. (2024). Evaluation of the mountain hydroclimate across the western United States in dynamically downscaled climate models. Journal of Hydrometeorology</a></li> 
-            <li><a href="https://doi.org/10.5194/acp-23-1019-2023"> Adhikari, P., Mejia, J. F. (2023). Aerosol–precipitation elevation dependence over the central Himalayas using cloud-resolving WRF-Chem numerical modeling. Atmospheric Chemistry and Physics </a></li> 
-            <li><a href="https://doi.org/10.1016/j.aeaoa.2022.100179"> Adhikari, P., & Mejia, J. F. (2022). Impact of transported dust aerosols on precipitation over the Nepal Himalayas using convection-permitting WRF-Chem simulation. Atmospheric Environment: X </a></li>  
-            <li><a href="https://doi.org/10.1007/s00382-021-05710-2"> Adhikari, P., Mejia, J. F. (2021). Influence of aerosols on clouds, precipitation and freezing level height over the foothills of the Himalayas during the Indian summer monsoon. Climate Dynamics </a></li>   
-        </ul>
-    </section>
-
-    <footer>
-        <p>&copy; 2025 Pramod Adhikari. All Rights Reserved.</p>
-    </footer>
-</body>
-</html>
+            <li><a href="https://doi.org/10.1175/JHM-D-24-0063.1">Adhikari, P., et al. (2024). Evaluation of the mountain hydroclimate...</a></li>
+            <li><a href="https://doi.org
