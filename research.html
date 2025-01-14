@@ -67,13 +67,14 @@
         }
         #plain-language-summary {
             display: flex;
-            flex-wrap: row;
-            gap: 20px;
+            flex-wrap: nowrap; /* Keep elements side-by-side on large screens */
+            gap: 20px; /* Add space between the image and text */
+            align-items: flex-start; /* Align items at the top */
             margin-top: 20px;
         }
+        
         #plain-language-summary img {
             max-width: 50%; /* Limit size for larger screens */
-            max-width: 100%;
             height: auto;
             flex-shrink: 0; /* Prevent the image from shrinking too much */
         }
