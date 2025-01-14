@@ -72,7 +72,7 @@
             margin-top: 20px;
         }
         #plain-language-summary img {
-            max-width: 50%;
+            max-width: 100%;
             height: auto;
         }
         #plain-language-summary div {
@@ -102,6 +102,14 @@
             nav ul li {
                 margin: 5px 0;
             }
+            #plain-language-summary {
+                flex-direction: column; /* Stack elements vertically */
+                align-items: center;    /* Center-align content */
+            }
+                #plain-language-summary img {
+                max-width: 90%; /* Adjust the width for better fit */
+            }
+
         }
     </style>
 </head>
