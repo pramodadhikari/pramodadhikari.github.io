@@ -133,6 +133,14 @@
         #contact {
             padding-bottom: 60px; /* Ensure spacing before the footer */
         }
+        #contact i {
+            font-size: 24px;
+            transition: transform 0.3s ease, color 0.3s ease;
+        }
+        #contact a:hover i {
+            transform: scale(1.2);
+            color: #ff6600; /* Optional hover color */
+        }
 
         footer {
             text-align: center;
@@ -246,18 +254,37 @@
     </section>
 
     <!-- Contact Section -->
+   
+
     <section id="contact">
-        <h2>Contact</h2>
-        <ul>
-            <li>Email: 
-                <a href="mailto:pramod.adhikari@uwyo.edu">pramod.adhikari@uwyo.edu</a> or 
-                <a href="mailto:adhik.pramod@gmail.com">adhik.pramod@gmail.com</a>
-            </li>
-            <li>LinkedIn: <a href="https://www.linkedin.com/in/pramod-adhikari-ph-d-773a276a/">https://www.linkedin.com/in/pramod-adhikari-ph-d-773a276a/</a></li>
-            <li>ResearchGate: <a href="https://www.researchgate.net/profile/Pramod-Adhikari">https://www.researchgate.net/profile/Pramod-Adhikari</a></li>
-            <li>ORCID: <a href="https://orcid.org/0000-0001-8614-2461" target="_blank">https://orcid.org/0000-0001-8614-2461</a></li>
-        </ul>
-    </section>
+    <h2>Contact</h2>
+    <ul style="list-style: none; padding: 0; margin: 0; display: flex; gap: 20px; align-items: center;">
+        <li>
+            <a href="mailto:pramod.adhikari@uwyo.edu" title="Email" style="text-decoration: none; margin-right: 10px;">
+                <i class="fas fa-envelope"></i>
+            </a> or 
+            <a href="mailto:pramod.adhikari@uwyo.edu" title="Email" style="color: #D44638; text-decoration: none;">
+                <i class="fas fa-envelope"></i>
+            </a>
+        </li>
+        <li>
+            <a href="https://www.linkedin.com/in/pramod-adhikari-ph-d-773a276a/" target="_blank" title="LinkedIn" style="color: #0077B5; text-decoration: none;">
+                <i class="fab fa-linkedin"></i>
+            </a>
+        </li>
+        <li>
+            <a href="https://www.researchgate.net/profile/Pramod-Adhikari" target="_blank" title="ResearchGate" style="color: #00CCBB; text-decoration: none;">
+                <i class="fab fa-researchgate"></i>
+            </a>
+        </li>
+        <li>
+            <a href="https://orcid.org/0000-0001-8614-2461" target="_blank" title="ORCID" style="color: #A6CE39; text-decoration: none;">
+                <i class="fab fa-orcid"></i>
+            </a>
+        </li>
+    </ul>
+</section>
+    
     <footer>
         <p>&copy;2025 Pramod Adhikari | Hosted by GitHub Pages</p>
     </footer>
