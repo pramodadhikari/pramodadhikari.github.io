@@ -46,6 +46,24 @@
             text-decoration: none;
         }
 
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 15px;
+        }
+
+        .social-icons a {
+            color: #fff;
+            font-size: 1.5rem;
+            text-decoration: none;
+            transition: transform 0.3s ease, color 0.3s ease;
+        }
+
+        .social-icons a:hover {
+            transform: scale(1.2);
+        }
+
         nav ul {
             display: flex;
             justify-content: center;
@@ -229,6 +247,14 @@
     <header>
         <h1>Pramod Adhikari</h1>
         <p>Ph.D. | Atmospheric & Climate Scientist </p>
+        <div class="social-icons">
+            <a href="mailto:pramod.adhikari@uwyo.edu" title="Email"><i class="fas fa-envelope"></i></a>
+            <a href="https://www.linkedin.com/in/pramod-adhikari-ph-d-773a276a/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            <a href="https://scholar.google.com/citations?user=QLI8ZaMAAAAJ&hl=en" target="_blank" title="Google Scholar"><i class="fas fa-graduation-cap"></i></a>
+            <a href="https://www.researchgate.net/profile/Pramod-Adhikari" target="_blank" title="ResearchGate"><i class="fab fa-researchgate"></i></a>
+            <a href="https://orcid.org/0000-0001-8614-2461" target="_blank" title="ORCID"><i class="fab fa-orcid"></i></a>
+            <a href="https://github.com/pramodadhikari" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+        </div>
     </header>
 
     <nav>
