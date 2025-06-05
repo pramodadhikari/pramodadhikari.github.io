@@ -153,6 +153,25 @@
       font-size: 1rem;
     }
 
+    .cv-pdf-link {
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+      color: #00bcd4;
+      font-weight: bold;
+      font-size: 1.5rem;
+    }
+    
+    .cv-pdf-link i {
+      font-size: 3rem;
+      margin-right: 10px;
+    }
+    
+    .cv-pdf-link:hover span {
+      font-size: 1.8rem;
+      transition: font-size 0.3s ease;
+    }
+
     a[download]:hover span {
       color: #03fcec;
       transform: scale(1.2);
@@ -226,14 +245,15 @@
   -->
 
   <!-- CV Sections --> 
- 
-  <div style="max-width: 800px; margin: 40px auto 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 0 20px;">
-  <h2 style="margin: 0; font-size: 2rem; color: #00bcd4;">CV</h2>
- <a href="cv/Adhikari_CV.pdf" target="_blank" title="View CV (PDF)"
-   style="display: flex; align-items: center; text-decoration: none; color: #00bcd4; font-weight: bold; font-size: 1.3rem;">
-  <i class="fas fa-file-pdf" style="font-size: 2rem; margin-right: 8px;"></i> PDF
-</a>
+
+  <div style="display: flex; justify-content: space-between; align-items: center; max-width: 800px; margin: 40px auto 0 auto; padding: 0 10px;">
+  <h2 style="color: #fff; margin: 0;">CV</h2>
+  <a href="cv/Adhikari_CV.pdf" target="_blank" title="View CV (pdf)" class="cv-pdf-link">
+    <i class="fas fa-file-pdf"></i>
+    <span>PDF</span>
+  </a>
 </div>
+ 
 <main
  <div class="cv-section">
   <h2>Academics</h2>
