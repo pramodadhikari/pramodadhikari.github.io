@@ -128,6 +128,7 @@
       margin-bottom: 25px;
       gap: 120px; /* Increase horizontal space between date and details */
       align-items: flex-start;
+      flex-wrap: wrap;
     }
     
        .cv-date-block {
@@ -161,6 +162,7 @@
       font-weight: bold;
       font-size: 1.5rem;
     }
+   
     
     .cv-pdf-link i {
       font-size: 3rem;
@@ -190,23 +192,78 @@
     }
 
     @media (max-width: 768px) {
-      header h1 {
-        font-size: 2rem;
-      }
-      header p {
-        font-size: 1rem;
-      }
-      .social-icons a {
-        font-size: 1rem;
-      }
-      nav ul {
-        flex-direction: column;
-        padding: 0;
-      }
-      nav ul li {
-        margin: 5px 0;
-      }
-    }
+  header {
+    padding-top: 100px;
+    height: auto;
+  }
+
+  header h1 {
+    font-size: 1.8rem;
+  }
+
+  header p {
+    font-size: 1rem;
+    padding: 0 10px;
+  }
+
+  .social-icons {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  nav ul {
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+    gap: 5px;
+  }
+
+  nav ul li {
+    margin: 0;
+    text-align: center;
+  }
+
+  .cv-section {
+    padding: 15px;
+    margin: 15px 10px;
+  }
+
+  .cv-entry-flex {
+    flex-direction: column;
+    gap: 5px;
+    margin-bottom: 20px;
+  }
+
+  .cv-date-block {
+    padding-left: 0;
+    font-size: 1rem;
+  }
+
+  .cv-detail-block .title {
+    font-size: 1rem;
+  }
+
+  .cv-detail-block .place {
+    font-size: 0.95rem;
+  }
+
+  .cv-pdf-link {
+    flex-direction: column;
+    align-items: flex-start;
+    font-size: 1.2rem;
+  }
+
+  .cv-pdf-link i {
+    font-size: 2.5rem;
+    margin-bottom: 5px;
+    margin-right: 0;
+  }
+
+  footer {
+    font-size: 0.85rem;
+    padding: 5px 10px;
+  }
+}
   </style>
 </head>
 <body>
