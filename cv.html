@@ -1,202 +1,234 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Publications - Pramod Adhikari</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            line-height: 1.6;
-            background-color: #f4f4f9;
-        }
-        header {
-            background: url('images/website_background_image.jpeg') no-repeat center center/cover;
-            color: #fff;
-            text-align: center;
-            padding-top: 190px;
-            padding-bottom: 10px;
-            position: relative;
-            height: 200px;
-        }
-       header h1 {
-            font-size: 3rem;
-            margin: 0;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CV - Pramod Adhikari</title>
+  <link
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    rel="stylesheet"
+  />
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+      background-color: #f4f4f9;
+    }
 
-        header p {
-            font-size: 1.5rem;
-            margin: 10px 0;
-        }
-         .social-icons {
-            margin: 50px 0;
-        }
+    header {
+      background: url('images/website_background_image.jpeg') no-repeat center center/cover;
+      color: #fff;
+      text-align: center;
+      padding-top: 190px;
+      padding-bottom: 10px;
+      height: 200px;
+    }
 
-        .social-icons a {
-            color: #fff;
-            margin: 0 10px;
-            font-size: 1.5rem;
-            text-decoration: none;
-        }
+    header h1 {
+      font-size: 3rem;
+      margin: 0;
+    }
 
-        .social-icons {
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-            margin-top: 15px;
-        }
+    header p {
+      font-size: 1.5rem;
+      margin: 10px 0;
+    }
 
-        .social-icons a {
-            color: #fff;
-            font-size: 2rem;
-            text-decoration: none;
-            transition: transform 0.3s ease, color 0.3s ease;
-        }
+    .social-icons {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      margin-top: 15px;
+    }
 
-        .social-icons a:hover {
-            transform: scale(1.3);
-            color: #f8f9f9;
-        }
-        nav ul {
-            display: flex;
-            justify-content: center;
-            list-style: none;
-            padding: 10px 0; /* Increase padding for a larger bar */
-            margin: 0;
-            background-color: #2e86c1; /* Add a background color */
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add a shadow for a sleek look */
-            border-radius: 8px; /* Add slight rounding to the edges */
-        }
+    .social-icons a {
+      color: #fff;
+      font-size: 2rem;
+      text-decoration: none;
+      transition: transform 0.3s ease, color 0.3s ease;
+    }
 
-        nav ul li {
-            margin: 0 20px;
-        }
+    .social-icons a:hover {
+      transform: scale(1.3);
+      color: #f8f9f9;
+    }
 
-        nav ul li a {
-            text-decoration: none;
-            color: #fff; /* Change font color to white */
-            font-weight: bold;
-            font-size: 1.2rem; /* Increase font size */
-            padding: 10px 15px; /* Add padding for larger clickable area */
-            border-radius: 5px;
-            transition: background-color 0.3s;
-        }
+    nav ul {
+      display: flex;
+      justify-content: center;
+      list-style: none;
+      padding: 10px 0;
+      margin: 0;
+      background-color: #2e86c1;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+    }
 
-        nav ul li a:hover {
-            background-color: #0056b3; /* Change background color on hover */
-        }
+    nav ul li {
+      margin: 0 20px;
+    }
 
-        section {
-            padding: 2rem 1rem; /* Adjust side padding */
-            margin: 0 auto;
-            margin-left: 4rem; /* Increase left margin */
-            margin-right: 4rem; /* Increase right margin */
-        } 
-        footer {
-            text-align: center;
-            padding: 10px 0;
-            background: #333;
-            color: #fff;
-        }
-        @media (max-width: 768px) {
-            header h1 {
-                font-size: 2rem;
-            }
-            header p {
-                font-size: 1rem;
-            }
-            .social-icons a {
-                font-size: 1rem;
-            }
-            nav ul {
-                flex-direction: column;
-                padding: 0;
-            }
-            nav ul li {
-                margin: 5px 0;
-            }
-        }
-    </style>
+    nav ul li a {
+      text-decoration: none;
+      color: #fff;
+      font-weight: bold;
+      font-size: 1.2rem;
+      padding: 10px 15px;
+      border-radius: 5px;
+      transition: background-color 0.3s;
+    }
+
+    nav ul li a:hover {
+      background-color: #0056b3;
+    }
+
+    .cv-section {
+      background-color: #1e1e2f;
+      color: #f0f0f0;
+      padding: 20px;
+      border-radius: 8px;
+      margin: 20px auto;
+      max-width: 800px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+    }
+
+    .cv-section h2 {
+      border-bottom: 1px solid #444;
+      padding-bottom: 10px;
+      margin-bottom: 20px;
+      font-size: 1.8rem;
+      color: #00bcd4;
+    }
+
+    .cv-entry {
+      margin-bottom: 20px;
+    }
+
+    .cv-entry .title {
+      font-weight: bold;
+      color: #03a9f4;
+    }
+
+    .cv-entry .place {
+      color: #ccc;
+      margin-bottom: 5px;
+    }
+
+    .cv-entry .date {
+      font-size: 0.9rem;
+      color: #aaa;
+      font-style: italic;
+    }
+
+    a[download]:hover {
+      background-color: #292943;
+      color: #00e5ff;
+      transition: all 0.3s ease;
+    }
+
+    footer {
+      text-align: center;
+      padding: 10px 0;
+      background: #333;
+      color: #fff;
+    }
+
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 2rem;
+      }
+      header p {
+        font-size: 1rem;
+      }
+      .social-icons a {
+        font-size: 1rem;
+      }
+      nav ul {
+        flex-direction: column;
+        padding: 0;
+      }
+      nav ul li {
+        margin: 5px 0;
+      }
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <h1>Pramod Adhikari</h1>
-        <p>Ph.D. | Atmospheric & Climate Scientist</p>
-        <div class="social-icons">
-            <a href="mailto:pramod.adhikari@uwyo.edu" title="Email"><i class="fas fa-envelope"></i></a>
-            <a href="https://www.linkedin.com/in/pramod-adhikari-ph-d-773a276a/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
-            <a href="https://scholar.google.com/citations?user=QLI8ZaMAAAAJ&hl=en" target="_blank" title="Google Scholar"><i class="fas fa-graduation-cap"></i></a>
-            <a href="https://www.researchgate.net/profile/Pramod-Adhikari" target="_blank" title="ResearchGate"><i class="fab fa-researchgate"></i></a>
-            <a href="https://orcid.org/0000-0001-8614-2461" target="_blank" title="ORCID"><i class="fab fa-orcid"></i></a>
-            <a href="https://github.com/pramodadhikari" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
-        </div>
-    </header>
-    <nav>
-    <ul>
-        <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
-        <li><a href="academics.html"><i class="fas fa-graduation-cap"></i> Academics</a></li>
-        <li><a href="research.html"><i class="fas fa-flask"></i> Research</a></li>
-        <li><a href="publications.html"><i class="fas fa-book"></i> Publications</a></li>
-        <li><a href="cv.html"><i class="fas fa-file-alt"></i> CV</a></li>
-        <li><a href="index.html#contact"><i class="fas fa-envelope"></i> Contact</a></li>
-    </ul>
-    </nav>
+  <header>
+    <h1>Pramod Adhikari</h1>
+    <p>Ph.D. | Atmospheric & Climate Scientist</p>
+    <div class="social-icons">
+      <a href="mailto:pramod.adhikari@uwyo.edu" title="Email"><i class="fas fa-envelope"></i></a>
+      <a href="https://www.linkedin.com/in/pramod-adhikari-ph-d-773a276a/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+      <a href="https://scholar.google.com/citations?user=QLI8ZaMAAAAJ&hl=en" target="_blank" title="Google Scholar"><i class="fas fa-graduation-cap"></i></a>
+      <a href="https://www.researchgate.net/profile/Pramod-Adhikari" target="_blank" title="ResearchGate"><i class="fab fa-researchgate"></i></a>
+      <a href="https://orcid.org/0000-0001-8614-2461" target="_blank" title="ORCID"><i class="fab fa-orcid"></i></a>
+      <a href="https://github.com/pramodadhikari" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+    </div>
+  </header>
 
-    <section>
+  <nav>
+    <ul>
+      <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+      <li><a href="academics.html"><i class="fas fa-graduation-cap"></i> Academics</a></li>
+      <li><a href="research.html"><i class="fas fa-flask"></i> Research</a></li>
+      <li><a href="publications.html"><i class="fas fa-book"></i> Publications</a></li>
+      <li><a href="cv.html"><i class="fas fa-file-alt"></i> CV</a></li>
+      <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- PDF Download Button -->
+  <main style="display: flex; justify-content: flex-end; max-width: 800px; margin: 20px auto;">
+    <a href="Pramod_Adhikari_CV.pdf" target="_blank" download title="Download PDF CV"
+       style="background-color: #1e1e2f; color: #03a9f4; text-decoration: none; padding: 10px 15px;
+              border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.3); display: flex; align-items: center;">
+      <i class="fas fa-file-pdf" style="margin-right: 8px; font-size: 1.2rem;"></i> PDF
+    </a>
+  </main>
+
+  <!-- CV Sections -->
+  <div class="cv-section">
     <h2>Education</h2>
-    <ul>
-        <li><b>Ph.D. (Atmospheric Science)</b>, University of Nevada, Reno, USA (2018–2022)</li>
-        <li><b>MS (Atmospheric Science)</b>, University of Nevada, Reno, USA (2015–2017)</li>
-        <li><b>MSc. (Physics)</b>, Tribhuvan University, Nepal (2011–2015)</li>
-        <li><b>BSc. (Physics)</b>, St. Xavier’s College, Tribhuvan University, Nepal (2007–2010)</li>
-    </ul>
-</section>
+    <div class="cv-entry"><div class="title">Ph.D. (Atmospheric Science)</div><div class="place">University of Nevada, Reno, USA</div><div class="date">2018 – 2022</div></div>
+    <div class="cv-entry"><div class="title">MS (Atmospheric Science)</div><div class="place">University of Nevada, Reno, USA</div><div class="date">2015 – 2017</div></div>
+    <div class="cv-entry"><div class="title">MSc. (Physics)</div><div class="place">Tribhuvan University, Nepal</div><div class="date">2011 – 2015</div></div>
+    <div class="cv-entry"><div class="title">BSc. (Physics)</div><div class="place">St. Xavier’s College, Nepal</div><div class="date">2007 – 2010</div></div>
+  </div>
 
-<section>
+  <div class="cv-section">
     <h2>Professional Experience</h2>
-    <ul>
-        <li><b>Postdoctoral Researcher</b>, University of Wyoming (2023–Present)</li>
-        <li><b>Graduate Research Assistant (Ph.D.)</b>, Desert Research Institute (2018–2022)</li>
-        <li><b>Graduate Teaching Assistant</b>, University of Nevada, Reno (2018–2022)</li>
-        <li><b>Graduate Research Assistant (M.S.)</b>, Desert Research Institute (2015–2017)</li>
-    </ul>
-</section>
+    <div class="cv-entry"><div class="title">Postdoctoral Researcher</div><div class="place">University of Wyoming</div><div class="date">2023 – Present</div></div>
+    <div class="cv-entry"><div class="title">Graduate Research Assistant (Ph.D.)</div><div class="place">Desert Research Institute, Reno</div><div class="date">2018 – 2022</div></div>
+    <div class="cv-entry"><div class="title">Graduate Teaching Assistant</div><div class="place">University of Nevada, Reno</div><div class="date">2018 – 2022</div></div>
+    <div class="cv-entry"><div class="title">Graduate Research Assistant (M.S.)</div><div class="place">Desert Research Institute, Reno</div><div class="date">2015 – 2017</div></div>
+  </div>
 
-<section>
+  <div class="cv-section">
     <h2>Honors and Awards</h2>
-    <ul>
-        <li>Colin Warden Memorial Endowment, DRI, 2021</li>
-        <li>GSA Travel Award, UNR, 2018, 2019, 2022</li>
-        <li>Charles Francis Cutts Scholarship, UNR, 2017–2018</li>
-        <li>International Graduate Student Scholarship, UNR, 2016–2017</li>
-        <li>M.Sc. Fellowship, Tribhuvan University, 2011–2013</li>
-    </ul>
-</section>
+    <div class="cv-entry"><div class="title">Colin Warden Memorial Endowment</div><div class="place">Outstanding Graduate Student Researcher, DRI</div><div class="date">2021</div></div>
+    <div class="cv-entry"><div class="title">GSA Travel Award</div><div class="place">University of Nevada, Reno</div><div class="date">2018 / 2019 / 2022</div></div>
+    <div class="cv-entry"><div class="title">Charles Francis Cutts Scholarship</div><div class="place">University of Nevada, Reno</div><div class="date">2017 – 2018</div></div>
+    <div class="cv-entry"><div class="title">International Graduate Student Scholarship</div><div class="place">University of Nevada, Reno</div><div class="date">2016 – 2017</div></div>
+  </div>
 
-<section>
-    <h2>Professional Associations</h2>
-    <ul>
-        <li>Member, American Geophysical Union (AGU)</li>
-        <li>Member, American Meteorological Society (AMS)</li>
-    </ul>
-</section>
-
-<section>
+  <div class="cv-section">
     <h2>Training and Workshops</h2>
-    <ul>
-        <li>WRF-Hydro Modeling Tutorial (Feb 2022)</li>
-        <li>Teaching with Technology Course (Jan–May 2019)</li>
-        <li>NCL & VAPOR Workshop (July 2018)</li>
-        <li>NASA ARSET Remote Sensing Training (Feb 2017)</li>
-        <li>Field: White Sand Dunes (Mar 2017); Wind Energy SODAR Survey (Apr–Jun 2014)</li>
-    </ul>
-</section>
-    
-    <footer>
-        <p>&copy;2025 Pramod Adhikari | Hosted by GitHub Pages</p>
-    </footer>
+    <div class="cv-entry"><div class="title">WRF-Hydro Modeling System</div><div class="place">Hands-on Tutorial</div><div class="date">Feb 2022</div></div>
+    <div class="cv-entry"><div class="title">Teaching with Technology Course</div><div class="place">University of Nevada, Reno</div><div class="date">Jan – May 2019</div></div>
+    <div class="cv-entry"><div class="title">NCL & VAPOR Workshop</div><div class="place">NCAR</div><div class="date">Jul 2018</div></div>
+  </div>
+
+  <div class="cv-section">
+    <h2>Professional Associations</h2>
+    <div class="cv-entry"><div class="title">American Geophysical Union (AGU)</div><div class="place">Member</div></div>
+    <div class="cv-entry"><div class="title">American Meteorological Society (AMS)</div><div class="place">Member</div></div>
+  </div>
+
+  <footer>
+    <p>&copy;2025 Pramod Adhikari | Hosted by GitHub Pages</p>
+  </footer>
 </body>
 </html>
