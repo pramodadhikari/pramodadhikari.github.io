@@ -122,18 +122,19 @@
       font-style: italic;
     }
 
-    .cv-entry-flex {
+      .cv-entry-flex {
       display: flex;
       justify-content: space-between;
-      margin-bottom: 20px;
-      gap: 20px;
+      margin-bottom: 25px;
+      gap: 40px; /* Increase horizontal space between date and details */
+      align-items: flex-start;
     }
     
     .cv-date-block {
-      flex: 0 0 150px;
+      flex: 0 0 160px; /* Optional: widen date block */
       color: #aaa;
       font-style: italic;
-      font-size: 0.9rem;
+      font-size: 1.1rem; /* Increased font size */
     }
     
     .cv-detail-block {
@@ -143,10 +144,12 @@
     .cv-detail-block .title {
       font-weight: bold;
       color: #03a9f4;
+      font-size: 1.1rem;
     }
     
     .cv-detail-block .place {
       color: #ccc;
+      font-size: 1rem;
     }
 
     a[download]:hover {
