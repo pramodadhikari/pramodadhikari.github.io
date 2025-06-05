@@ -122,6 +122,33 @@
       font-style: italic;
     }
 
+    .cv-entry-flex {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 20px;
+      gap: 20px;
+    }
+    
+    .cv-date-block {
+      flex: 0 0 150px;
+      color: #aaa;
+      font-style: italic;
+      font-size: 0.9rem;
+    }
+    
+    .cv-detail-block {
+      flex: 1;
+    }
+    
+    .cv-detail-block .title {
+      font-weight: bold;
+      color: #03a9f4;
+    }
+    
+    .cv-detail-block .place {
+      color: #ccc;
+    }
+
     a[download]:hover {
       background-color: #292943;
       color: #00e5ff;
@@ -192,7 +219,9 @@
 
   <!-- CV Sections -->
  
-  <main
+ 
+
+  <!--
   <div class="cv-section">
     <h2>Academics</h2>
     <div class="cv-entry"><div class="title">Ph.D. (Atmospheric Science)</div><div class="place">University of Nevada, Reno, USA</div><div class="date">2018 – 2022</div></div>
@@ -200,6 +229,45 @@
     <div class="cv-entry"><div class="title">MSc. (Physics)</div><div class="place">Tribhuvan University, Nepal</div><div class="date">2011 – 2015</div></div>
     <div class="cv-entry"><div class="title">BSc. (Physics)</div><div class="place">St. Xavier’s College, Nepal</div><div class="date">2007 – 2010</div></div>
   </div>
+  -->
+ <main
+ <div class="cv-section">
+  <h2>Academics</h2>
+
+  <div class="cv-entry-flex">
+    <div class="cv-date-block">2018 – 2022</div>
+    <div class="cv-detail-block">
+      <div class="title">Ph.D. (Atmospheric Science)</div>
+      <div class="place">University of Nevada, Reno, USA</div>
+    </div>
+  </div>
+
+  <div class="cv-entry-flex">
+    <div class="cv-date-block">2015 – 2017</div>
+    <div class="cv-detail-block">
+      <div class="title">MS (Atmospheric Science)</div>
+      <div class="place">University of Nevada, Reno, USA</div>
+    </div>
+  </div>
+
+  <div class="cv-entry-flex">
+    <div class="cv-date-block">2011 – 2015</div>
+    <div class="cv-detail-block">
+      <div class="title">MSc. (Physics)</div>
+      <div class="place">Tribhuvan University, Nepal</div>
+    </div>
+  </div>
+
+  <div class="cv-entry-flex">
+    <div class="cv-date-block">2007 – 2010</div>
+    <div class="cv-detail-block">
+      <div class="title">BSc. (Physics)</div>
+      <div class="place">St. Xavier’s College, Nepal</div>
+    </div>
+  </div>
+</div>
+
+    
 
   <div class="cv-section">
     <h2>Professional Experience</h2>
