@@ -99,16 +99,19 @@
 	ol.reversed-bracketed li {
 	    counter-increment: item -1;
 	    position: relative;
+	    padding-left: 3.5em; /* Creates space so text doesn't overlap number */
 	    margin-bottom: 1rem;
 	    font-size: 1.1rem;
 	    line-height: 1.6;
 	}
 	
 	ol.reversed-bracketed li::before {
-	    content: "[" counter(item) "]. ";
+	    content: "[" counter(item) "].";
 	    position: absolute;
-	    left: -1.5em;
+	    left: 0;
 	    font-weight: bold;
+	    width: 3em; /* Adds spacing between number and text */
+	    display: inline-block;
 	}
 
         section {
