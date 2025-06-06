@@ -40,17 +40,20 @@
     }
 
     .timeline-year {
-      position: absolute;
+      position: sticky;
+      top: 0;
       left: 50%;
       transform: translateX(-50%);
       background: #00cfff;
       color: #000;
-      padding: 0.2em 0.8em;
+      padding: 0.4em 1em;
       border-radius: 20px;
       font-weight: bold;
-      font-size: 1rem;
+      font-size: 1.75rem;
       margin-top: -1.5em;
-      z-index: 2;
+      z-index: 3;
+      text-align: center;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
     }
 
     .timeline-block {
@@ -138,10 +141,14 @@
     .timeline-content small {
       display: block;
       font-size: 1rem;
-      color: #00cfff;
       font-weight: bold;
       margin-bottom: 0.5em;
     }
+
+    .color-edu { color: #ffcc00; }
+    .color-adventure { color: #00ffcc; }
+    .color-research { color: #66ccff; }
+    .color-travel { color: #ff6699; }
 
     @media screen and (max-width: 768px) {
       .timeline::after {
@@ -190,96 +197,99 @@
 </head>
 <body>
 
-  <h2>📍 From the Mountains to the Models </h2>
+  <h2>📍 Life & Adventure Timeline</h2>
 
   <div class="timeline">
 
-    <div class="timeline-block left">
-      <div class="timeline-year">🗻</div>
-      <div class="timeline-content">
-        <small>Early Childhood</small>
-        <h3>Taplejung, Nepal</h3>
-        <p>Origin of our family, nestled in the Himalayas.</p>
-        <img src="images/taplejung.jpg" alt="Taplejung" class="timeline-image" loading="lazy">
-      </div>
-    </div>
+<!-- Replace timeline icons with year text (e.g., <div class="timeline-year">2007</div>) -->
+<!-- Use CSS classes like color-edu, color-adventure, color-research, color-travel for year styling -->
+<!-- Example: <div class="timeline-year color-edu">2015</div> -->
 
-    <div class="timeline-block right">
-      <div class="timeline-year">📚</div>
-      <div class="timeline-content">
-        <small>– 2007</small>
-        <h3>Biratnagar, Nepal</h3>
-        <p>High school years — where my passion for science began.</p>
-        <img src="images/biratnagar.jpg" alt="Biratnagar" class="timeline-image" loading="lazy">
-      </div>
-    </div>
+<div class="timeline-block left">
+  <div class="timeline-year color-travel">1990</div>
+  <div class="timeline-content">
+    <small>Early Childhood</small>
+    <h3>Taplejung, Nepal</h3>
+    <p>Origin of our family, nestled in the Himalayas.</p>
+    <img src="images/taplejung.jpg" alt="Taplejung" class="timeline-image" loading="lazy">
+  </div>
+</div>
 
-    <div class="timeline-block left">
-      <div class="timeline-year">🎓</div>
-      <div class="timeline-content">
-        <small>2007 – 2015</small>
-        <h3>Kathmandu, Nepal</h3>
-        <p>Undergraduate and master's degrees, and began my early research experiences in atmospheric science.</p>
-        <img src="images/kathmandu.jpg" alt="Kathmandu" class="timeline-image" loading="lazy">
-      </div>
-    </div>
+<div class="timeline-block right">
+  <div class="timeline-year color-edu">2007</div>
+  <div class="timeline-content">
+    <small>– 2007</small>
+    <h3>Biratnagar, Nepal</h3>
+    <p>High school years — where my passion for science began.</p>
+    <img src="images/biratnagar.jpg" alt="Biratnagar" class="timeline-image" loading="lazy">
+  </div>
+</div>
 
-    <div class="timeline-block right">
-      <div class="timeline-year">🚣</div>
-      <div class="timeline-content">
-        <small>2012</small>
-        <h3>Whitewater Rafting, Colorado</h3>
-        <p>Conquered the rapids — an unforgettable water adventure.</p>
-        <img src="images/rafting.jpg" alt="Rafting" class="timeline-image" loading="lazy">
-      </div>
-    </div>
+<div class="timeline-block left">
+  <div class="timeline-year color-edu">2015</div>
+  <div class="timeline-content">
+    <small>2007 – 2015</small>
+    <h3>Kathmandu, Nepal</h3>
+    <p>Undergraduate and master's degrees, and began my early research experiences in atmospheric science.</p>
+    <img src="images/kathmandu.jpg" alt="Kathmandu" class="timeline-image" loading="lazy">
+  </div>
+</div>
 
-    <div class="timeline-block left">
-      <div class="timeline-year">🎓</div>
-      <div class="timeline-content">
-        <small>2015 – 2022</small>
-        <h3>Reno, NV, USA</h3>
-        <p>Moved here for graduate studies, marking a key transition in my academic journey.</p>
-        <ul>
-          <li><strong>2017</strong>: Master’s in Atmospheric Science, University of Nevada, Reno</li>
-          <li><strong>2022</strong>: PhD in Atmospheric Science, University of Nevada, Reno</li>
-        </ul>
-        <img src="images/reno.jpg" alt="Reno" class="timeline-image" loading="lazy">
-      </div>
-    </div>
+<div class="timeline-block right">
+  <div class="timeline-year color-adventure">2012</div>
+  <div class="timeline-content">
+    <small>2012</small>
+    <h3>Whitewater Rafting, Colorado</h3>
+    <p>Conquered the rapids — an unforgettable water adventure.</p>
+    <img src="images/rafting.jpg" alt="Rafting" class="timeline-image" loading="lazy">
+  </div>
+</div>
 
-    <div class="timeline-block right">
-      <div class="timeline-year">🪂</div>
-      <div class="timeline-content">
-        <small>2018</small>
-        <h3>Skydiving, Lake Tahoe</h3>
-        <p>Jumped from 13,000 ft. — the world looked so different from above.</p>
-        <img src="images/skydive.jpg" alt="Skydiving" class="timeline-image" loading="lazy">
-      </div>
-    </div>
+<div class="timeline-block left">
+  <div class="timeline-year color-edu">2022</div>
+  <div class="timeline-content">
+    <small>2015 – 2022</small>
+    <h3>Reno, NV, USA</h3>
+    <p>Moved here for graduate studies, marking a key transition in my academic journey.</p>
+    <ul>
+      <li><strong>2017</strong>: Master’s in Atmospheric Science, University of Nevada, Reno</li>
+      <li><strong>2022</strong>: PhD in Atmospheric Science, University of Nevada, Reno</li>
+    </ul>
+    <img src="images/reno.jpg" alt="Reno" class="timeline-image" loading="lazy">
+  </div>
+</div>
 
-    <div class="timeline-block left">
-      <div class="timeline-year">🧪</div>
-      <div class="timeline-content">
-        <small>2023 – Present</small>
-        <h3>Laramie, Wyoming</h3>
-        <p>Currently working on regional climate modeling as a postdoc.</p>
-        <img src="images/laramie.jpg" alt="Laramie" class="timeline-image" loading="lazy">
-      </div>
-    </div>
+<div class="timeline-block right">
+  <div class="timeline-year color-adventure">2018</div>
+  <div class="timeline-content">
+    <small>2018</small>
+    <h3>Skydiving, Lake Tahoe</h3>
+    <p>Jumped from 13,000 ft. — the world looked so different from above.</p>
+    <img src="images/skydive.jpg" alt="Skydiving" class="timeline-image" loading="lazy">
+  </div>
+</div>
 
-    <div class="timeline-block right">
-      <div class="timeline-year">🧗</div>
-      <div class="timeline-content">
-        <small>2025</small>
-        <h3>Bungee Jump, Kushma, Nepal</h3>
-        <p>Jumped off a bridge (750ft) over a Kaligandaki river gorge — pure adrenaline!</p>
-        <img src="images/bungee.jpg" alt="Bungee Jump" class="timeline-image" loading="lazy">
-      </div>
-    </div>
+<div class="timeline-block left">
+  <div class="timeline-year color-research">2023</div>
+  <div class="timeline-content">
+    <small>2023 – Present</small>
+    <h3>Laramie, Wyoming</h3>
+    <p>Currently working on regional climate modeling as a postdoc.</p>
+    <img src="images/laramie.jpg" alt="Laramie" class="timeline-image" loading="lazy">
+  </div>
+</div>
+
+<div class="timeline-block right">
+  <div class="timeline-year color-adventure">2025</div>
+  <div class="timeline-content">
+    <small>2025</small>
+    <h3>Bungee Jump, Kushma, Nepal</h3>
+    <p>Jumped off a bridge (750ft) over a Kaligandaki river gorge — pure adrenaline!</p>
+    <img src="images/bungee.jpg" alt="Bungee Jump" class="timeline-image" loading="lazy">
+  </div>
+</div>
 
   </div>
 
 </body>
 </html>
-
