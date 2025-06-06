@@ -115,16 +115,14 @@
 
     .timeline-hover .timeline-image {
       display: none;
-      position: absolute;
-      top: 100%;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 250px;
-      margin-top: 1em;
-      border-radius: 8px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-      z-index: 10;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      object-fit: cover;
       opacity: 0;
+      z-index: 1000;
       transition: opacity 0.3s ease;
     }
 
@@ -157,13 +155,8 @@
       .timeline-block.right .timeline-content {
         margin: 0;
       }
-
-      .timeline-hover .timeline-image {
-        left: 20%;
-      }
     }
   </style>
-
   <script>
     document.addEventListener("DOMContentLoaded", () => {
       const blocks = document.querySelectorAll(".timeline-block");
@@ -179,7 +172,6 @@
     });
   </script>
 </head>
-
 <body>
 
   <h2><span class="hourglass">⏳</span> Roots, Roads & Research</h2>
