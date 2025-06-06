@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pramod Adhikari, PhD - Personal Website</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    
     <style>
         /* General Styles */
         body {
@@ -176,6 +177,8 @@
             height: auto;
         }
 
+        body { visibility: hidden; }
+
         /* Responsive Design */
         @media (max-width: 768px) {
             header {
@@ -270,13 +273,14 @@
     </ul>
 </nav>
 -->
-    <div id="header-container"></div>
-    
+    <div id="header-container" style="min-height: 250px;"></div>
+
     <script>
       fetch("header.html")
         .then(response => response.text())
         .then(data => {
           document.getElementById("header-container").innerHTML = data;
+          document.body.style.visibility = "visible";
         });
     </script>
 
