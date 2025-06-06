@@ -233,101 +233,31 @@
     border-radius: 4px;
   }
 
-}
-
-  @media (max-width: 768px) {
-
-    
-  .sidebar ul {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 10px;
-  }
-
-  .sidebar ul li a {
-    font-size: 1rem;
-    padding: 6px 10px;
-  }
-}
-
-  header h1 {
-    font-size: 2rem;
-  }
-
-  header p {
-    font-size: 1rem;
-    padding: 0 10px;
-  }
-
-  .social-icons {
-    flex-wrap: wrap;
-    gap: 10px;
-  }
-
-  nav ul {
-    flex-direction: column;
-    padding: 0;
-    margin: 0;
-    gap: 5px;
-  }
-
-  nav ul li {
-    margin: 0;
-    text-align: center;
-  }
-
-  .cv-section {
-    padding: 15px;
-    margin: 15px 10px;
-  }
-
-  .cv-entry-flex {
-    
-    gap: 5px;
-    margin-bottom: 10px;
-  }
-
-  .cv-date-block {
-    padding-left: 0;
-    font-size: 1rem;
-  }
-
-  .cv-detail-block .title {
-    font-size: 1rem;
-  }
-
-  .cv-detail-block .place {
-    font-size: 0.95rem;
-  }
-
-  .cv-pdf-link {
-    flex-direction: column;
-    align-items: flex-start;
-    color: #3498db; 
-    font-size: 1rem;
-  }
-
-  .cv-pdf-link:visited {
-    color: #3498db; /* prevents purple or browser default on visit */
-  }
-
-  .cv-pdf-link i {
-    font-size: 2.5rem;
-    margin-bottom: 5px;
-    color: #3498db; 
-    margin-right: 0;
-  }
-
-  .cv-pdf-link:visited i {
-    color: #3498db; /* keep icon red when visited */
-  }
-
   footer {
-    font-size: 0.85rem;
-    padding: 5px 10px;
+    text-align: center;
+            padding: 10px 0;
+            background: #333;
+            color: #fff;
   }
 }
+   @media (max-width: 768px) {
+          header h1 {
+              font-size: 2rem;
+          }
+          header p {
+              font-size: 1rem;
+          }
+          .social-icons a {
+              font-size: 1rem;
+          }
+          nav ul {
+              flex-direction: column;
+              padding: 0;
+          }
+          nav ul li {
+              margin: 5px 0;
+          }
+        }
   </style>
 </head>
 <body>
