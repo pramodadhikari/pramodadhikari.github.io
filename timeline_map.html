@@ -1,1 +1,130 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Interactive Timeline Map</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+    <style>
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+      }
+
+      #map {
+        height: 100%;
+        width: 100%;
+      }
+
+      .info-content img {
+        width: 100%;
+        max-height: 120px;
+        object-fit: cover;
+        border-radius: 5px;
+        margin-bottom: 8px;
+      }
+
+      .info-content h3 {
+        margin-top: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="map"></div>
+
+    <script>
+      function initMap() {
+        const map = new google.maps.Map(document.getElementById("map"), {
+          zoom: 3,
+          center: { lat: 30.0, lng: 0.0 },
+        });
+
+        const locations = [
+          {
+            position: { lat: 27.3540, lng: 87.6680 },
+            title: "Taplejung, Nepal",
+            content: `
+              <div class="info-content">
+                <img src="images/taplejung.jpg" alt="Taplejung">
+                <h3>Taplejung, Nepal</h3>
+                <p>Remote and scenic, Taplejung is close to Kanchenjunga. I visited here during early field excursions and treks in eastern Nepal.</p>
+              </div>`
+          },
+          {
+            position: { lat: 26.4525, lng: 87.2718 },
+            title: "Biratnagar, Nepal",
+            content: `
+              <div class="info-content">
+                <img src="images/biratnagar.jpg" alt="Biratnagar">
+                <h3>Biratnagar, Nepal</h3>
+                <p>My hometown and where I completed my school education. It's where my passion for science began.</p>
+              </div>`
+          },
+          {
+            position: { lat: 27.7103, lng: 85.3222 },
+            title: "Kathmandu, Nepal",
+            content: `
+              <div class="info-content">
+                <img src="images/kathmandu.jpg" alt="Kathmandu">
+                <h3>Kathmandu, Nepal</h3>
+                <p>Studied and worked in Kathmandu. This is where I earned my master's degree and engaged in early research experiences.</p>
+              </div>`
+          },
+          {
+            position: { lat: 39.5299, lng: -119.8143 },
+            title: "Reno, NV, USA",
+            content: `
+              <div class="info-content">
+                <img src="images/reno.jpg" alt="Reno">
+                <h3>Reno, Nevada</h3>
+                <p>I moved to Reno for graduate studies and research. This was a turning point in my academic career abroad.</p>
+              </div>`
+          },
+          {
+            position: { lat: 32.3142, lng: -106.7798 },
+            title: "Las Cruces, NM, USA",
+            content: `
+              <div class="info-content">
+                <img src="images/lascruces.jpg" alt="Las Cruces">
+                <h3>Las Cruces, New Mexico</h3>
+                <p>Collaborated on atmospheric science projects here. Warm weather and new professional connections.</p>
+              </div>`
+          },
+          {
+            position: { lat: 41.3114, lng: -105.5911 },
+            title: "Laramie, WY, USA",
+            content: `
+              <div class="info-content">
+                <img src="images/laramie.jpg" alt="Laramie">
+                <h3>Laramie, Wyoming</h3>
+                <p>Currently working as a postdoctoral researcher in regional climate modeling at the University of Wyoming.</p>
+              </div>`
+          },
+        ];
+
+        // Add markers
+        locations.forEach((loc) => {
+          const marker = new google.maps.Marker({
+            position: loc.position,
+            map,
+            title: loc.title,
+          });
+
+          const infoWindow = new google.maps.InfoWindow({
+            content: loc.content,
+          });
+
+          marker.addListener("click", () => {
+            infoWindow.open(map, marker);
+          });
+        });
+      }
+    </script>
+
+    <script async
+      src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY_HERE&callback=initMap">
+    </script>
+  </body>
+</html>
 
