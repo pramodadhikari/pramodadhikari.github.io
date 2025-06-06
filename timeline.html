@@ -2,122 +2,220 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Timeline Journey - Pramod Adhikari</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Interactive Timeline - Pramod Adhikari</title>
   <style>
     body {
       font-family: Arial, sans-serif;
+      background: #f0f4f8;
       margin: 0;
-      background: #f4f4f9;
+      padding: 0;
     }
 
     h2 {
       text-align: center;
-      padding: 1em 0;
-      font-size: 2rem;
-      color: #333;
+      padding: 1em;
+      font-size: 2.2rem;
+      background: #008cba;
+      color: #fff;
+      margin: 0;
     }
 
-    #timeline {
-      max-width: 800px;
-      margin: auto;
-      padding: 2em;
-      background: #fff;
-      border-radius: 12px;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    }
-
-    .timeline-entry {
+    .timeline {
       position: relative;
-      padding-left: 2em;
-      margin-bottom: 2.5em;
-      border-left: 3px solid #007BFF;
+      max-width: 1200px;
+      margin: 2em auto;
     }
 
-    .timeline-entry::before {
+    .timeline::after {
       content: '';
       position: absolute;
-      top: 0.3em;
-      left: -0.65em;
-      width: 1em;
-      height: 1em;
+      width: 6px;
       background-color: #007BFF;
+      top: 0;
+      bottom: 0;
+      left: 50%;
+      margin-left: -3px;
+    }
+
+    .timeline-block {
+      position: relative;
+      width: 50%;
+      padding: 1em 2em;
+      box-sizing: border-box;
+    }
+
+    .timeline-block.left {
+      left: 0;
+    }
+
+    .timeline-block.right {
+      left: 50%;
+    }
+
+    .timeline-content {
+      background: #fff;
+      padding: 1em;
+      border-radius: 10px;
+      position: relative;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+    }
+
+    .timeline-block.left .timeline-content {
+      margin-left: auto;
+      text-align: left;
+    }
+
+    .timeline-block.right .timeline-content {
+      margin-right: auto;
+      text-align: left;
+    }
+
+    .timeline-block::before {
+      content: '';
+      position: absolute;
+      top: 15px;
+      width: 20px;
+      height: 20px;
+      background-color: #007BFF;
+      border: 4px solid #fff;
       border-radius: 50%;
-      box-shadow: 0 0 0 3px #fff;
+      z-index: 1;
     }
 
-    .timeline-entry h3 {
-      margin-bottom: 0.3em;
-      color: #1a1a1a;
+    .timeline-block.left::before {
+      right: -10px;
     }
 
-    .timeline-entry p,
-    .timeline-entry ul {
-      margin-top: 0.3em;
-      color: #555;
+    .timeline-block.right::before {
+      left: -10px;
     }
 
-    .timeline-entry ul {
-      padding-left: 1em;
-      list-style-type: disc;
+    .timeline-image {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 250px;
+      margin-top: 1em;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+      z-index: 10;
     }
 
-    @media (max-width: 600px) {
-      #timeline {
-        padding: 1.5em;
+    .timeline-block:hover .timeline-image {
+      display: block;
+    }
+
+    @media screen and (max-width: 768px) {
+      .timeline::after {
+        left: 20px;
       }
 
-      .timeline-entry {
-        padding-left: 1.5em;
+      .timeline-block {
+        width: 100%;
+        padding-left: 40px;
+        padding-right: 25px;
+      }
+
+      .timeline-block.right {
+        left: 0;
+      }
+
+      .timeline-block.left::before,
+      .timeline-block.right::before {
+        left: 10px;
+      }
+
+      .timeline-block.left .timeline-content,
+      .timeline-block.right .timeline-content {
+        margin: 0;
+      }
+
+      .timeline-image {
+        left: 20%;
       }
     }
   </style>
 </head>
 <body>
 
-  <section id="timeline">
-    <h2>📍 Timeline Journey</h2>
+  <h2>📍 Life & Adventure Timeline</h2>
 
-    <div class="timeline-entry">
-      <h3>Taplejung, Nepal</h3>
-      <p><em>"At the lap of Himalayas"</em><br>
-      This is where our root belongs — the origin of our family and heritage.</p>
+  <div class="timeline">
+
+    <div class="timeline-block left">
+      <div class="timeline-content">
+        <h3>Taplejung, Nepal</h3>
+        <p>Origin of our family, nestled in the Himalayas.</p>
+        <img src="images/taplejung.jpg" alt="Taplejung" class="timeline-image">
+      </div>
     </div>
 
-    <div class="timeline-entry">
-      <h3>Biratnagar, Nepal <span style="font-weight: normal;">(...to 2007)</span></h3>
-      <p><em>"My hometown"</em><br>
-      I completed my high school here. This is where my passion for science first took shape.</p>
+    <div class="timeline-block right">
+      <div class="timeline-content">
+        <h3>Biratnagar, Nepal</h3>
+        <p>High school years — where my passion for science began.</p>
+        <img src="images/biratnagar.jpg" alt="Biratnagar" class="timeline-image">
+      </div>
     </div>
 
-    <div class="timeline-entry">
-      <h3>Kathmandu, Nepal <span style="font-weight: normal;">(2007–2015)</span></h3>
-      <p><em>"Academic foundation"</em><br>
-      Earned my undergraduate and master's degrees, and began my early research experiences in climate science.</p>
+    <div class="timeline-block left">
+      <div class="timeline-content">
+        <h3>Kathmandu, Nepal</h3>
+        <p> Undergraduate and master's degrees, and began my early research experiences in atmospheric science.</p>
+        <img src="images/kathmandu.jpg" alt="Kathmandu" class="timeline-image">
+      </div>
     </div>
 
-    <div class="timeline-entry">
-      <h3>Reno, Nevada, USA <span style="font-weight: normal;">(from 2015)</span></h3>
-      <p><em>"Academic leap abroad"</em><br>
-      Moved here for graduate studies, marking a key transition in my academic journey.</p>
-      <ul>
-        <li><strong>2017</strong>: Master’s in Atmospheric Science, University of Nevada, Reno</li>
-        <li><strong>2022</strong>: PhD in Atmospheric Science, University of Nevada, Reno</li>
+    <div class="timeline-block right">
+      <div class="timeline-content">
+        <h3>Whitewater Rafting, Colorado</h3>
+        <p>Conquered the rapids — an unforgettable water adventure.</p>
+        <img src="images/rafting.jpg" alt="Rafting" class="timeline-image">
+      </div>
+    </div>
+
+    <div class="timeline-block left">
+      <div class="timeline-content">
+        <h3>Reno, NV, USA</h3>
+        <p>   Moved here for graduate studies, marking a key transition in my academic journey.</p>
+        <img src="images/kathmandu.jpg" alt="Kathmandu" class="timeline-image">
+         <ul>
+          <li><strong>2017</strong>: Master’s in Atmospheric Science, University of Nevada, Reno</li>
+          <li><strong>2022</strong>: PhD in Atmospheric Science, University of Nevada, Reno</li>
       </ul>
+      </div>
+    </div>
+  
+    <div class="timeline-block right">
+      <div class="timeline-content">
+        <h3>Skydiving, Lake Tahoe</h3>
+        <p>Jumped from 13,000 ft. — the world looked so different from above.</p>
+        <img src="images/skydive.jpg" alt="Skydiving" class="timeline-image">
+      </div>
     </div>
 
-    <div class="timeline-entry">
-      <h3>Las Cruces, New Mexico, USA <span style="font-weight: normal;">(Aug 2022 – Jan 2023)</span></h3>
-      <p><em>"Beyond Earth"</em><br>
-      Collaborated on outer planet atmospheric projects. Enjoyed the warm climate and built new professional relationships.</p>
+    <div class="timeline-block left">
+      <div class="timeline-content">
+        <h3>Laramie, Wyoming</h3>
+        <p>Currently working on regional climate modeling as a postdoc.</p>
+        <img src="images/laramie.jpg" alt="Laramie" class="timeline-image">
+      </div>
     </div>
 
-    <div class="timeline-entry">
-      <h3>Laramie, Wyoming, USA <span style="font-weight: normal;">(Jan 2023 – Present)</span></h3>
-      <p><em>"Back to Earth"</em><br>
-      Currently working as a postdoctoral researcher in regional climate modeling at the University of Wyoming.</p>
+      <div class="timeline-block right">
+      <div class="timeline-content">
+        <h3>Bungee Jump, Kushma, Nepal</h3>
+        <p>Jumped off a bridge (750ft) over a Kaligandaki river gorge  — pure adrenaline!</p>
+        <img src="images/bungee.jpg" alt="Bungee Jump" class="timeline-image">
+      </div>
     </div>
-  </section>
+
+
+  </div>
 
 </body>
 </html>
