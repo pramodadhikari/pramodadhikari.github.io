@@ -15,6 +15,7 @@
       padding: 0;
       line-height: 1.6;
       background-color: #f4f4f9;
+      visibility: hidden;
     }
 
     header {
@@ -191,7 +192,15 @@
       color: #fff;
     }
 
-  body { visibility: hidden; }
+  
+
+  .sidebar {
+    position: sticky;
+    top: 100px;
+    flex: 0 0 220px;
+    height: fit-content;
+    align-self: flex-start;
+  }
 
   @media (max-width: 768px) {
   header {
@@ -295,11 +304,12 @@
   </a>
 </div>
 
-<main
-<div style="display: flex; max-width: 1100px; margin: 0 auto; gap: 40px; align-items: flex-start;">
+
+<main style="display: flex; max-width: 1100px; margin: 0 auto; gap: 40px; align-items: flex-start;">
 
     <!-- Sidebar -->
-    <aside style="flex: 0 0 220px; position: sticky; top: 100px;">
+    <aside  class="sidebar"> 
+    
       <ul style="list-style: none; padding: 0; margin: 0;">
         <li style="margin-bottom: 15px;">
           <a href="#about-me" style="text-decoration: none; color: #2e86c1; font-size: 1.2rem; font-weight: bold;">About Me</a>
@@ -317,7 +327,8 @@
           <a href="#associations" style="text-decoration: none; color: #2e86c1; font-size: 1.2rem; font-weight: bold;">Professional Associations</a>
         </li>
       </ul>
-    </aside>
+     </aside>
+    
 
   <!-- About Me Section -->
   <div class="cv-section" id="about-me" style="flex: 1;">
@@ -364,8 +375,8 @@
   
 
   
-<main 
-<div class="cv-section" id="academics" style="margin-left: 250px;">
+
+ <div class="cv-section" id="academics" >
   <h2>Academics</h2>
 
   <div class="cv-entry-flex">
@@ -400,10 +411,8 @@
     </div>
   </div>
 </div>
-</main>
 
-  <main 
-  <div class="cv-section" id="experience" style="margin-left: 250px;">
+  <div class="cv-section" id="experience" >
   <h2>Professional Experience</h2>
 
   <div class="cv-entry-flex">
@@ -437,10 +446,8 @@
       <div class="place">Desert Research Institute, Reno, USA</div>
     </div>
   </div>
- </main>
-
-  <main
-  <div class="cv-section" id="awards" style="margin-left: 250px;">
+ 
+  <div class="cv-section" id="awards" >
   <h2>Honors and Awards</h2>
 
   <div class="cv-entry-flex">
@@ -474,10 +481,8 @@
       <div class="place">University of Nevada, Reno</div>
     </div>
   </div>
-    </main>
-
-  <main
-  <div class="cv-section" id="associations" style="margin-left: 250px;">
+    
+  <div class="cv-section" id="associations" >
     <h2>Professional Associations</h2>
 
     <div class="cv-entry-flex">
@@ -496,6 +501,7 @@
       </div>
     </div>
   </div>
+    
  </main>
 
   <footer>
