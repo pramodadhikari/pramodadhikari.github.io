@@ -3,196 +3,121 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Interactive Timeline - Pramod Adhikari</title>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <title>Timeline Journey - Pramod Adhikari</title>
   <style>
     body {
-      font-family: 'Roboto', sans-serif;
+      font-family: Arial, sans-serif;
       margin: 0;
-      padding: 0;
       background: #f4f4f9;
+    }
+
+    h2 {
+      text-align: center;
+      padding: 1em 0;
+      font-size: 2rem;
       color: #333;
     }
 
-    h1 {
-      text-align: center;
-      padding: 20px 10px;
-      background-color: #005f73;
-      color: white;
-      margin: 0;
-    }
-
-    .timeline {
-      position: relative;
+    #timeline {
       max-width: 800px;
-      margin: 50px auto;
-      padding: 10px;
-    }
-
-    .timeline::after {
-      content: '';
-      position: absolute;
-      width: 6px;
-      background-color: #005f73;
-      top: 0;
-      bottom: 0;
-      left: 50%;
-      margin-left: -3px;
+      margin: auto;
+      padding: 2em;
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     }
 
     .timeline-entry {
-      padding: 10px 40px;
       position: relative;
-      background-color: inherit;
-      width: 50%;
+      padding-left: 2em;
+      margin-bottom: 2.5em;
+      border-left: 3px solid #007BFF;
     }
 
-    .timeline-entry.left {
-      left: 0;
-    }
-
-    .timeline-entry.right {
-      left: 50%;
-    }
-
-    .timeline-entry::after {
-      content: ' ';
+    .timeline-entry::before {
+      content: '';
       position: absolute;
-      width: 20px;
-      height: 20px;
-      right: -10px;
-      background-color: white;
-      border: 4px solid #005f73;
-      top: 15px;
+      top: 0.3em;
+      left: -0.65em;
+      width: 1em;
+      height: 1em;
+      background-color: #007BFF;
       border-radius: 50%;
-      z-index: 1;
+      box-shadow: 0 0 0 3px #fff;
     }
 
-    .timeline-entry.right::after {
-      left: -10px;
+    .timeline-entry h3 {
+      margin-bottom: 0.3em;
+      color: #1a1a1a;
     }
 
-    .content {
-      padding: 20px;
-      background-color: white;
-      position: relative;
-      border-radius: 6px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    .timeline-entry p,
+    .timeline-entry ul {
+      margin-top: 0.3em;
+      color: #555;
     }
 
-    .content h3 {
-      margin-top: 0;
-      color: #005f73;
+    .timeline-entry ul {
+      padding-left: 1em;
+      list-style-type: disc;
     }
 
-    .collapsible {
-      cursor: pointer;
-      padding: 10px;
-      background-color: #e0fbfc;
-      border: none;
-      outline: none;
-      text-align: left;
-      font-size: 16px;
-      width: 100%;
-    }
-
-    .collapsible.active, .collapsible:hover {
-      background-color: #98c1d9;
-    }
-
-    .content-detail {
-      padding: 0 15px;
-      display: none;
-      overflow: hidden;
-      background-color: #f1f1f1;
-      border-left: 4px solid #005f73;
-    }
-
-    @media screen and (max-width: 768px) {
-      .timeline-entry {
-        width: 100%;
-        left: 0 !important;
-        margin-bottom: 30px;
+    @media (max-width: 600px) {
+      #timeline {
+        padding: 1.5em;
       }
 
-      .timeline-entry.right::after, .timeline-entry.left::after {
-        left: 50%;
+      .timeline-entry {
+        padding-left: 1.5em;
       }
     }
   </style>
 </head>
 <body>
 
-<h1>Interactive Timeline - Pramod Adhikari</h1>
+  <section id="timeline">
+    <h2>📍 Timeline Journey</h2>
 
-<div class="timeline">
-
-  <div class="timeline-entry left">
-    <div class="content">
-      <h3>2025 - Research Scientist Application</h3>
-      <button class="collapsible">More Info</button>
-      <div class="content-detail">
-        <p>Applied for Research Scientist II position at NYS DEC in Air Quality Modeling.</p>
-      </div>
+    <div class="timeline-entry">
+      <h3>Taplejung, Nepal</h3>
+      <p><em>"At the lap of Himalayas"</em><br>
+      This is where our root belongs — the origin of our family and heritage.</p>
     </div>
-  </div>
 
-  <div class="timeline-entry right">
-    <div class="content">
-      <h3>2024 - Postdoctoral Research</h3>
-      <button class="collapsible">More Info</button>
-      <div class="content-detail">
-        <p>Working on high-resolution regional climate modeling using WRF/WRF-Chem over the Rocky Mountains.</p>
-      </div>
+    <div class="timeline-entry">
+      <h3>Biratnagar, Nepal <span style="font-weight: normal;">(...to 2007)</span></h3>
+      <p><em>"My hometown"</em><br>
+      I completed my high school here. This is where my passion for science first took shape.</p>
     </div>
-  </div>
 
-  <div class="timeline-entry left">
-    <div class="content">
-      <h3>2022 - Ph.D. Completion</h3>
-      <button class="collapsible">More Info</button>
-      <div class="content-detail">
-        <p>Completed Ph.D. in Atmospheric Science. Dissertation focused on hydrometeorological impacts of warming climate.</p>
-      </div>
+    <div class="timeline-entry">
+      <h3>Kathmandu, Nepal <span style="font-weight: normal;">(2007–2015)</span></h3>
+      <p><em>"Academic foundation"</em><br>
+      Earned my undergraduate and master's degrees, and began my early research experiences in climate science.</p>
     </div>
-  </div>
 
-  <div class="timeline-entry right">
-    <div class="content">
-      <h3>2018 - M.S. Program</h3>
-      <button class="collapsible">More Info</button>
-      <div class="content-detail">
-        <p>Began Master's degree in Climate Science at a U.S. university.</p>
-      </div>
+    <div class="timeline-entry">
+      <h3>Reno, Nevada, USA <span style="font-weight: normal;">(from 2015)</span></h3>
+      <p><em>"Academic leap abroad"</em><br>
+      Moved here for graduate studies, marking a key transition in my academic journey.</p>
+      <ul>
+        <li><strong>2017</strong>: Master’s in Atmospheric Science, University of Nevada, Reno</li>
+        <li><strong>2022</strong>: PhD in Atmospheric Science, University of Nevada, Reno</li>
+      </ul>
     </div>
-  </div>
 
-  <div class="timeline-entry left">
-    <div class="content">
-      <h3>2015 - Kathmandu to Reno</h3>
-      <button class="collapsible">More Info</button>
-      <div class="content-detail">
-        <p>Moved to the U.S. from Nepal for higher education. Began academic journey in climate and atmospheric science.</p>
-      </div>
+    <div class="timeline-entry">
+      <h3>Las Cruces, New Mexico, USA <span style="font-weight: normal;">(Aug 2022 – Jan 2023)</span></h3>
+      <p><em>"Beyond Earth"</em><br>
+      Collaborated on outer planet atmospheric projects. Enjoyed the warm climate and built new professional relationships.</p>
     </div>
-  </div>
 
-</div>
-
-<script>
-  const coll = document.querySelectorAll(".collapsible");
-  coll.forEach(button => {
-    button.addEventListener("click", function() {
-      this.classList.toggle("active");
-      const content = this.nextElementSibling;
-      if (content.style.display === "block") {
-        content.style.display = "none";
-      } else {
-        content.style.display = "block";
-      }
-    });
-  });
-</script>
+    <div class="timeline-entry">
+      <h3>Laramie, Wyoming, USA <span style="font-weight: normal;">(Jan 2023 – Present)</span></h3>
+      <p><em>"Back to Earth"</em><br>
+      Currently working as a postdoctoral researcher in regional climate modeling at the University of Wyoming.</p>
+    </div>
+  </section>
 
 </body>
 </html>
