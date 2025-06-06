@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Interactive Timeline - Pramod Adhikari</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f4f4f9;
+      color: #333;
+    }
+
+    h1 {
+      text-align: center;
+      padding: 20px 10px;
+      background-color: #005f73;
+      color: white;
+      margin: 0;
+    }
+
+    .timeline {
+      position: relative;
+      max-width: 800px;
+      margin: 50px auto;
+      padding: 10px;
+    }
+
+    .timeline::after {
+      content: '';
+      position: absolute;
+      width: 6px;
+      background-color: #005f73;
+      top: 0;
+      bottom: 0;
+      left: 50%;
+      margin-left: -3px;
+    }
+
+    .timeline-entry {
+      padding: 10px 40px;
+      position: relative;
+      background-color: inherit;
+      width: 50%;
+    }
+
+    .timeline-entry.left {
+      left: 0;
+    }
+
+    .timeline-entry.right {
+      left: 50%;
+    }
+
+    .timeline-entry::after {
+      content: ' ';
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      right: -10px;
+      background-color: white;
+      border: 4px solid #005f73;
+      top: 15px;
+      border-radius: 50%;
+      z-index: 1;
+    }
+
+    .timeline-entry.right::after {
+      left: -10px;
+    }
+
+    .content {
+      padding: 20px;
+      background-color: white;
+      position: relative;
+      border-radius: 6px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    .content h3 {
+      margin-top: 0;
+      color: #005f73;
+    }
+
+    .collapsible {
+      cursor: pointer;
+      padding: 10px;
+      background-color: #e0fbfc;
+      border: none;
+      outline: none;
+      text-align: left;
+      font-size: 16px;
+      width: 100%;
+    }
+
+    .collapsible.active, .collapsible:hover {
+      background-color: #98c1d9;
+    }
+
+    .content-detail {
+      padding: 0 15px;
+      display: none;
+      overflow: hidden;
+      background-color: #f1f1f1;
+      border-left: 4px solid #005f73;
+    }
+
+    @media screen and (max-width: 768px) {
+      .timeline-entry {
+        width: 100%;
+        left: 0 !important;
+        margin-bottom: 30px;
+      }
+
+      .timeline-entry.right::after, .timeline-entry.left::after {
+        left: 50%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<h1>Interactive Timeline - Pramod Adhikari</h1>
+
+<div class="timeline">
+
+  <div class="timeline-entry left">
+    <div class="content">
+      <h3>2025 - Research Scientist Application</h3>
+      <button class="collapsible">More Info</button>
+      <div class="content-detail">
+        <p>Applied for Research Scientist II position at NYS DEC in Air Quality Modeling.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="timeline-entry right">
+    <div class="content">
+      <h3>2024 - Postdoctoral Research</h3>
+      <button class="collapsible">More Info</button>
+      <div class="content-detail">
+        <p>Working on high-resolution regional climate modeling using WRF/WRF-Chem over the Rocky Mountains.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="timeline-entry left">
+    <div class="content">
+      <h3>2022 - Ph.D. Completion</h3>
+      <button class="collapsible">More Info</button>
+      <div class="content-detail">
+        <p>Completed Ph.D. in Atmospheric Science. Dissertation focused on hydrometeorological impacts of warming climate.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="timeline-entry right">
+    <div class="content">
+      <h3>2018 - M.S. Program</h3>
+      <button class="collapsible">More Info</button>
+      <div class="content-detail">
+        <p>Began Master's degree in Climate Science at a U.S. university.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="timeline-entry left">
+    <div class="content">
+      <h3>2015 - Kathmandu to Reno</h3>
+      <button class="collapsible">More Info</button>
+      <div class="content-detail">
+        <p>Moved to the U.S. from Nepal for higher education. Began academic journey in climate and atmospheric science.</p>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<script>
+  const coll = document.querySelectorAll(".collapsible");
+  coll.forEach(button => {
+    button.addEventListener("click", function() {
+      this.classList.toggle("active");
+      const content = this.nextElementSibling;
+      if (content.style.display === "block") {
+        content.style.display = "none";
+      } else {
+        content.style.display = "block";
+      }
+    });
+  });
+</script>
+
+</body>
+</html>
