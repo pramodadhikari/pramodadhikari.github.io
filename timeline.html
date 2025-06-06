@@ -1,28 +1,158 @@
-.timeline-hover {
-  position: relative;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Interactive Timeline - Pramod Adhikari</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to bottom, #0e2f44 0%, #1d1f27 100%);
+      margin: 0;
+      padding: 0;
+    }
 
-.timeline-hover .timeline-image {
-  display: none;
-  position: absolute;
-  top: 100%;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 250px;
-  margin-top: 1em;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.2);
-  z-index: 10;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-}
+    h2 {
+      text-align: center;
+      padding: 1em;
+      font-size: 2.5rem;
+      background: #004d66;
+      color: #fff;
+      margin: 0;
+      letter-spacing: 1px;
+    }
 
-.timeline-hover:hover .timeline-image {
-  display: block;
-  opacity: 1;
-}
+    .timeline {
+      position: relative;
+      max-width: 1200px;
+      margin: 2em auto;
+    }
 
-</style>
+    .timeline::after {
+      content: '';
+      position: absolute;
+      width: 6px;
+      background-color: #00cfff;
+      top: 0;
+      bottom: 0;
+      left: 50%;
+      margin-left: -3px;
+    }
+
+    .timeline-block {
+      position: relative;
+      width: 50%;
+      padding: 2em;
+      box-sizing: border-box;
+      color: #fff;
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all 0.6s ease-out;
+    }
+
+    .timeline-block.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .timeline-block.left {
+      left: 0;
+    }
+
+    .timeline-block.right {
+      left: 50%;
+    }
+
+    .timeline-block::before {
+      content: '';
+      position: absolute;
+      top: 15px;
+      width: 20px;
+      height: 20px;
+      background-color: #00cfff;
+      border: 4px solid #fff;
+      border-radius: 50%;
+      z-index: 1;
+    }
+
+    .timeline-block.left::before {
+      right: -10px;
+    }
+
+    .timeline-block.right::before {
+      left: -10px;
+    }
+
+    .timeline-content {
+      background: #1b1e24;
+      padding: 1em;
+      border-radius: 10px;
+      position: relative;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+    }
+
+    .timeline-year {
+      color: orange;
+      font-size: 1.25rem;
+      font-weight: bold;
+      margin-bottom: 0.5em;
+    }
+
+    .timeline-hover {
+      position: relative;
+    }
+
+    .timeline-hover .timeline-image {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 250px;
+      margin-top: 1em;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+      z-index: 10;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .timeline-hover:hover .timeline-image {
+      display: block;
+      opacity: 1;
+    }
+
+    @media screen and (max-width: 768px) {
+      .timeline::after {
+        left: 20px;
+      }
+
+      .timeline-block {
+        width: 100%;
+        padding-left: 40px;
+        padding-right: 25px;
+      }
+
+      .timeline-block.right {
+        left: 0;
+      }
+
+      .timeline-block.left::before,
+      .timeline-block.right::before {
+        left: 10px;
+      }
+
+      .timeline-block.left .timeline-content,
+      .timeline-block.right .timeline-content {
+        margin: 0;
+      }
+
+      .timeline-hover .timeline-image {
+        left: 20%;
+      }
+    }
+  </style>
+
   <script>
     document.addEventListener("DOMContentLoaded", () => {
       const blocks = document.querySelectorAll(".timeline-block");
@@ -38,93 +168,104 @@
     });
   </script>
 </head>
+
 <body>
 
-  <h2>📍 Life & Adventure Timeline</h2>
+  <h2>📍 Roots, Roads & Research</h2>
 
   <div class="timeline">
 
-<!-- Replace timeline icons with year text (e.g., <div class="timeline-year">2007</div>) -->
-<!-- Use CSS classes like color-edu, color-adventure, color-research, color-travel for year styling -->
-<!-- Example: <div class="timeline-year color-edu">2022</div> -->
+    <div class="timeline-block left">
+      <div class="timeline-content">
+        <div class="timeline-year">Root</div>
+        <h3>Taplejung, Nepal</h3>
+        <p>Origin of our family, nestled in the Himalayas.</p>
+        <div class="timeline-hover">
+          <img src="images/taplejung.jpg" alt="Taplejung" class="timeline-image" loading="lazy">
+        </div>
+      </div>
+    </div>
 
-<div class="timeline-block left">
-  <div class="timeline-year color-travel">Root</div>
-  <div class="timeline-content">
-  <div class="timeline-content">
-    <h3>Taplejung, Nepal</h3>
-    <p>Origin of our family, nestled in the Himalayas.</p>
-    <div class="timeline-hover"><img src="images/taplejung.jpg" alt="Taplejung" class="timeline-image" loading="lazy"></div>
-  </div>
-</div>
+    <div class="timeline-block right">
+      <div class="timeline-content">
+        <div class="timeline-year">Early Childhood</div>
+        <h3>Biratnagar, Nepal</h3>
+        <p>High school years — where my passion for science began.</p>
+        <div class="timeline-hover">
+          <img src="images/biratnagar.jpg" alt="Biratnagar" class="timeline-image" loading="lazy">
+        </div>
+      </div>
+    </div>
 
-<div class="timeline-block right">
-   <div class="timeline-year color-travel">Early Childhood</div>
-  <div class="timeline-content">
-  <div class="timeline-content">
-    <h3>Biratnagar, Nepal</h3>
-    <p>High school years — where my passion for science began.</p>
-    <img src="images/biratnagar.jpg" alt="Biratnagar" class="timeline-image" loading="lazy">
-  </div>
-</div>
+    <div class="timeline-block left">
+      <div class="timeline-content">
+        <div class="timeline-year">2007–2015</div>
+        <h3>Kathmandu, Nepal</h3>
+        <p>Undergraduate and master's degrees, and began my early research experiences in atmospheric science.</p>
+        <div class="timeline-hover">
+          <img src="images/kathmandu.jpg" alt="Kathmandu" class="timeline-image" loading="lazy">
+        </div>
+      </div>
+    </div>
 
-<div class="timeline-block left">
-  <div class="timeline-year color-edu">2007-2015</div>
-  <div class="timeline-content">
-    <h3>Kathmandu, Nepal</h3>
-    <p>Undergraduate and master's degrees, and began my early research experiences in atmospheric science.</p>
-    <img src="images/kathmandu.jpg" alt="Kathmandu" class="timeline-image" loading="lazy">
-  </div>
-</div>
+    <div class="timeline-block right">
+      <div class="timeline-content">
+        <div class="timeline-year">2012</div>
+        <h3>Whitewater Rafting, Colorado</h3>
+        <p>Conquered the rapids — an unforgettable water adventure.</p>
+        <div class="timeline-hover">
+          <img src="images/rafting.jpg" alt="Rafting" class="timeline-image" loading="lazy">
+        </div>
+      </div>
+    </div>
 
-<div class="timeline-block right">
-  <div class="timeline-year color-adventure">2012</div>
-  <div class="timeline-content">
-    <h3>Whitewater Rafting, Colorado</h3>
-    <p>Conquered the rapids — an unforgettable water adventure.</p>
-    <img src="images/rafting.jpg" alt="Rafting" class="timeline-image" loading="lazy">
-  </div>
-</div>
+    <div class="timeline-block left">
+      <div class="timeline-content">
+        <div class="timeline-year">2015–2022</div>
+        <h3>Reno, NV, USA</h3>
+        <p>Moved here for graduate studies, marking a key transition in my academic journey.</p>
+        <ul>
+          <li><strong>2017</strong>: MS in Atmospheric Science, University of Nevada, Reno</li>
+          <li><strong>2022</strong>: PhD in Atmospheric Science, University of Nevada, Reno</li>
+        </ul>
+        <div class="timeline-hover">
+          <img src="images/reno.jpg" alt="Reno" class="timeline-image" loading="lazy">
+        </div>
+      </div>
+    </div>
 
-<div class="timeline-block left">
-  <div class="timeline-year color-edu">2015 – 2022</div>
-  <div class="timeline-content">
-    <h3>Reno, NV, USA</h3>
-    <p>Moved here for graduate studies, marking a key transition in my academic journey.</p>
-    <ul>
-      <li><strong>2017</strong>: MS in Atmospheric Science, University of Nevada, Reno</li>
-      <li><strong>2022</strong>: PhD in Atmospheric Science, University of Nevada, Reno</li>
-    </ul>
-    <img src="images/reno.jpg" alt="Reno" class="timeline-image" loading="lazy">
-  </div>
-</div>
+    <div class="timeline-block right">
+      <div class="timeline-content">
+        <div class="timeline-year">2018</div>
+        <h3>Skydiving, Lake Tahoe</h3>
+        <p>Jumped from 13,000 ft. — the world looked so different from above.</p>
+        <div class="timeline-hover">
+          <img src="images/skydive.jpg" alt="Skydiving" class="timeline-image" loading="lazy">
+        </div>
+      </div>
+    </div>
 
-<div class="timeline-block right">
-  <div class="timeline-year color-adventure">2018</div>
-  <div class="timeline-content">
-    <h3>Skydiving, Lake Tahoe</h3>
-    <p>Jumped from 13,000 ft. — the world looked so different from above.</p>
-    <img src="images/skydive.jpg" alt="Skydiving" class="timeline-image" loading="lazy">
-  </div>
-</div>
+    <div class="timeline-block left">
+      <div class="timeline-content">
+        <div class="timeline-year">2023–Present</div>
+        <h3>Laramie, Wyoming</h3>
+        <p>Currently working on regional climate modeling as a postdoc.</p>
+        <div class="timeline-hover">
+          <img src="images/laramie.jpg" alt="Laramie" class="timeline-image" loading="lazy">
+        </div>
+      </div>
+    </div>
 
-<div class="timeline-block left">
-  <div class="timeline-year color-research">2023-present</div>
-  <div class="timeline-content">
-    <h3>Laramie, Wyoming</h3>
-    <p>Currently working on regional climate modeling as a postdoc.</p>
-    <img src="images/laramie.jpg" alt="Laramie" class="timeline-image" loading="lazy">
-  </div>
-</div>
-
-<div class="timeline-block right">
-  <div class="timeline-year color-adventure">2025</div>
-  <div class="timeline-content">
-    <h3>Bungee Jump, Kushma, Nepal</h3>
-    <p>Jumped off a bridge (750ft) over a Kaligandaki river gorge — pure adrenaline!</p>
-    <img src="images/bungee.jpg" alt="Bungee Jump" class="timeline-image" loading="lazy">
-  </div>
-</div>
+    <div class="timeline-block right">
+      <div class="timeline-content">
+        <div class="timeline-year">2025</div>
+        <h3>Bungee Jump, Kushma, Nepal</h3>
+        <p>Jumped off a bridge (750ft) over a Kaligandaki river gorge — pure adrenaline!</p>
+        <div class="timeline-hover">
+          <img src="images/bungee.jpg" alt="Bungee Jump" class="timeline-image" loading="lazy">
+        </div>
+      </div>
+    </div>
 
   </div>
 
