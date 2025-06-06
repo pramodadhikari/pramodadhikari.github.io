@@ -40,20 +40,20 @@
     }
 
     .timeline-year {
-  position: sticky;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  background: #1b1e24;
+  background: transparent;
   color: orange;
-  padding: 0.5em 1.2em;
-  border-radius: 20px;
-  font-weight: 900;
-  font-size: 2.25rem;
-  margin-top: -1.5em;
-  z-index: 3;
-  text-align: center;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-bottom: 0.5em;
+  position: relative;
+  text-align: left;
+  left: 0;
+  transform: none;
+  top: auto;
+  border-radius: 0;
+  box-shadow: none;
+  padding: 0;
+  z-index: auto;
 }
 
     .timeline-block {
@@ -206,7 +206,8 @@
 <!-- Example: <div class="timeline-year color-edu">2022</div> -->
 
 <div class="timeline-block left">
-  <div class="timeline-year color-travel">Early Childhood</div>
+  <div class="timeline-content">
+    <div class="timeline-year">Early Childhood</div>
   <div class="timeline-content">
     <h3>Taplejung, Nepal</h3>
     <p>Origin of our family, nestled in the Himalayas.</p>
