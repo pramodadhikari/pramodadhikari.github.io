@@ -114,22 +114,21 @@
     }
 
     .timeline-hover .timeline-image {
-      display: none;
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100vw;
-      height: 100vh;
-      object-fit: cover;
-      opacity: 0;
-      z-index: 1000;
-      transition: opacity 0.3s ease;
-    }
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  z-index: 1000;
+  transition: opacity 0.3s ease;
+  display: block;
+  pointer-events: none;
+}
 
     .timeline-hover:hover .timeline-image {
-      display: block;
-      opacity: 1;
-    }
+  opacity: 1;
+}
 
     @media screen and (max-width: 768px) {
       .timeline::after {
@@ -175,6 +174,7 @@
 <body>
 
   <h2><span class="hourglass">⏳</span> Roots, Roads & Research</h2>
+
 
   <div class="timeline">
 
