@@ -245,6 +245,7 @@
     </style>
 </head>
 <body>
+    <!-- 
     <header>
         <h1>Pramod Adhikari</h1>
         <p>Ph.D. | Atmospheric Scientist </p>
@@ -255,27 +256,6 @@
             <a href="https://www.researchgate.net/profile/Pramod-Adhikari" target="_blank" title="ResearchGate"><i class="fab fa-researchgate"></i></a>
             <a href="https://orcid.org/0000-0001-8614-2461" target="_blank" title="ORCID"><i class="fab fa-orcid"></i></a>
             <a href="https://github.com/pramodadhikari" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
-        
-            <!--
-            <a href="mailto:pramod.adhikari@uwyo.edu" title="Email" style="color:#808080; text-decoration: none; margin-right: 10px;">
-                <i class="fas fa-envelope"></i>
-            </a> 
-            <a href="https://www.linkedin.com/in/pramod-adhikari-ph-d-773a276a/" target="_blank" title="LinkedIn" style="color: #0077B5; text-decoration: none;">
-                <i class="fab fa-linkedin"></i>
-            </a>
-            <a href="https://scholar.google.com/citations?user=QLI8ZaMAAAAJ&hl=en" target="_blank" title="Google Scholar" style="color: #4285F4; text-decoration: none;">
-                <i class="fas fa-graduation-cap"></i>
-            </a>
-            <a href="https://www.researchgate.net/profile/Pramod-Adhikari" target="_blank" title="ResearchGate" style="color: #00CCBB; text-decoration: none;">
-                <i class="fab fa-researchgate"></i>
-            </a>
-            <a href="https://orcid.org/0000-0001-8614-2461" target="_blank" title="ORCID" style="color: #A6CE39; text-decoration: none;">
-                <i class="fab fa-orcid"></i>
-            </a>
-            <a href="https://github.com/pramodadhikari" target="_blank" title="GitHub" style="color: #333; text-decoration: none;">
-                <i class="fab fa-github"></i>
-            </a>
-            -->
             
         </div>
     </header>
@@ -291,6 +271,16 @@
         <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
     </ul>
 </nav>
+-->
+    <div id="header-container"></div>
+    
+    <script>
+      fetch("header.html")
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById("header-container").innerHTML = data;
+        });
+    </script>
 
     <!-- Home Section -->
     <section id="home">
