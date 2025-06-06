@@ -296,65 +296,67 @@
 </div>
 
 <main
-<!-- Sidebar Menu (floats to the left) -->
-<aside style="position: fixed; top: 200px; left: 40px; width: 200px;">
-  <ul style="list-style: none; padding: 0; margin: 0;">
-    <li style="margin-bottom: 15px;">
-      <a href="#about-me" style="text-decoration: none; color: #2e86c1; font-weight: bold; font-size: 1.2rem;">About Me</a>
-    </li>
-    <li style="margin-bottom: 15px;">
-      <a href="#academics" style="text-decoration: none; color: #2e86c1; font-weight: bold; font-size: 1.2rem;">Academics</a>
-    </li>
-    <li style="margin-bottom: 15px;">
-      <a href="#experience" style="text-decoration: none; color: #2e86c1; font-weight: bold; font-size: 1.2rem;">Professional Experience</a>
-    </li>
-    <li style="margin-bottom: 15px;">
-      <a href="#awards" style="text-decoration: none; color: #2e86c1; font-weight: bold; font-size: 1.2rem;">Honors & Awards</a>
-    </li>
-    <li style="margin-bottom: 15px;">
-      <a href="#associations" style="text-decoration: none; color: #2e86c1; font-weight: bold; font-size: 1.2rem;">Professional Associations</a>
-    </li>
-  </ul>
-</aside>
+<div style="display: flex; max-width: 1000px; margin: 0 auto; position: relative;">
+  
+  <!-- Sticky Sidebar Menu (fixed only after About Me starts) -->
+  <aside style="position: sticky; top: 40px; align-self: flex-start; width: 220px; padding-right: 20px;">
+    <ul style="list-style: none; padding: 0; margin: 0;">
+      <li style="margin-bottom: 15px;">
+        <a href="#about-me" style="text-decoration: none; color: #2e86c1; font-size: 1.2rem; font-weight: bold;">About Me</a>
+      </li>
+      <li style="margin-bottom: 15px;">
+        <a href="#academics" style="text-decoration: none; color: #2e86c1; font-size: 1.2rem; font-weight: bold;">Academics</a>
+      </li>
+      <li style="margin-bottom: 15px;">
+        <a href="#experience" style="text-decoration: none; color: #2e86c1; font-size: 1.2rem; font-weight: bold;">Professional Experience</a>
+      </li>
+      <li style="margin-bottom: 15px;">
+        <a href="#awards" style="text-decoration: none; color: #2e86c1; font-size: 1.2rem; font-weight: bold;">Honors & Awards</a>
+      </li>
+      <li style="margin-bottom: 15px;">
+        <a href="#associations" style="text-decoration: none; color: #2e86c1; font-size: 1.2rem; font-weight: bold;">Professional Associations</a>
+      </li>
+    </ul>
+  </aside>
 
-<!-- About Me Section <div class="cv-section" id="about-me" style="margin-left: auto; margin-right: auto; max-width: 800px;">-->
+  <!-- About Me Section -->
+  <div class="cv-section" id="about-me" style="flex: 1;">
+    <h2>About Me</h2>
 
-<div class="cv-section" id="about-me" style="max-width: 800px; margin: 40px auto 0 auto; margin-left: 250px;">
-  <h2>About Me</h2>
-
-  <div class="cv-entry-flex">
-    <div class="cv-date-block">Name</div>
-    <div class="cv-detail-block">
-      <div class="title">Pramod Adhikari</div>
+    <div class="cv-entry-flex">
+      <div class="cv-date-block">Name</div>
+      <div class="cv-detail-block">
+        <div class="title">Pramod Adhikari</div>
+      </div>
     </div>
-  </div>
 
-  <div class="cv-entry-flex">
-    <div class="cv-date-block">Position</div>
-    <div class="cv-detail-block">
-      <div class="title">Postdoctoral Researcher</div>
+    <div class="cv-entry-flex">
+      <div class="cv-date-block">Position</div>
+      <div class="cv-detail-block">
+        <div class="title">Postdoctoral Researcher</div>
+      </div>
     </div>
-  </div>
 
-  <div class="cv-entry-flex">
-    <div class="cv-date-block">Email</div>
-    <div class="cv-detail-block">
-      <a href="mailto:pramod.adhikari@uwyo.edu" class="title">pramod.adhikari@uwyo.edu</a>
+    <div class="cv-entry-flex">
+      <div class="cv-date-block">Email</div>
+      <div class="cv-detail-block">
+        <a href="mailto:pramod.adhikari@uwyo.edu" class="title">pramod.adhikari@uwyo.edu</a>
+      </div>
     </div>
-  </div>
 
-  <div class="cv-entry-flex">
-    <div class="cv-date-block">URL</div>
-    <div class="cv-detail-block">
-      <a href="https://pramodadhikari.github.io" target="_blank" class="title">https://pramodadhikari.github.io</a>
+    <div class="cv-entry-flex">
+      <div class="cv-date-block">URL</div>
+      <div class="cv-detail-block">
+        <a href="https://pramodadhikari.github.io" target="_blank" class="title">https://pramodadhikari.github.io</a>
+      </div>
     </div>
-  </div>
 
-  <div class="cv-entry-flex">
-    <div class="cv-date-block">Summary</div>
-    <div class="cv-detail-block">
-      <div class="place">
-        Researcher specializing in high-resolution regional climate modeling, focused on impacts of warming climate on hydrometeorology.
+    <div class="cv-entry-flex">
+      <div class="cv-date-block">Summary</div>
+      <div class="cv-detail-block">
+        <div class="place">
+          Researcher specializing in high-resolution regional climate modeling, focused on impacts of warming climate on hydrometeorology.
+        </div>
       </div>
     </div>
   </div>
