@@ -10,6 +10,7 @@
       background: linear-gradient(to bottom, #0e2f44 0%, #1d1f27 100%);
       margin: 0;
       padding: 0;
+      visibility: hidden;
     }
 
     h2 {
@@ -18,87 +19,11 @@
       font-size: 2.5rem;
       background: #004d66;
       color: #fff;
-      margin: 0;
+      margin: 0 auto;
       letter-spacing: 1px;
+      max-width: 800px;
+      border-radius: 8px;
     }
-
-    header {
-            background: url('images/website_background_image.jpeg') no-repeat center center/cover;
-            color: #fff;
-            text-align: center;
-            padding-top: 190px;
-            padding-bottom: 10px;
-            position: relative;
-            height: 200px;
-        }
-
-     header h1 {
-            font-size: 3rem;
-            margin: 0;
-        }
-
-        header p {
-            font-size: 1.5rem;
-            margin: 10px 0;
-        }
-         .social-icons {
-            margin: 50px 0;
-        }
-
-        .social-icons a {
-            color: #fff;
-            margin: 0 10px;
-            font-size: 1.5rem;
-            text-decoration: none;
-        }
-
-        .social-icons {
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-            margin-top: 15px;
-        }
-
-        .social-icons a {
-            color: #fff;
-            font-size: 2rem;
-            text-decoration: none;
-            transition: transform 0.3s ease, color 0.3s ease;
-        }
-
-        .social-icons a:hover {
-            transform: scale(1.3);
-            color: #f8f9f9;
-        }
-
-    nav ul {
-            display: flex;
-            justify-content: center;
-            list-style: none;
-            padding: 10px 0; /* Increase padding for a larger bar */
-            margin: 0;
-            background-color: #2e86c1; /* Add a background color */
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add a shadow for a sleek look */
-            border-radius: 8px; /* Add slight rounding to the edges */
-        }
-
-        nav ul li {
-            margin: 0 20px;
-        }
-
-        nav ul li a {
-            text-decoration: none;
-            color: #fff; /* Change font color to white */
-            font-weight: bold;
-            font-size: 1.2rem; /* Increase font size */
-            padding: 10px 15px; /* Add padding for larger clickable area */
-            border-radius: 5px;
-            transition: background-color 0.3s;
-        }
-
-        nav ul li a:hover {
-            background-color: #0056b3; /* Change background color on hover */
-        }
 
     .hourglass {
       display: inline-block;
@@ -111,25 +36,6 @@
       100% { transform: rotate(360deg); }
     }
 
-  .fixed-title {
-      position: fixed;
-      top: 250px; /* Adjust depending on your header + nav height */
-      width: 100%;
-      text-align: center;
-      z-index: 998; /* Below header-container (z-index: 999) */
-    }
-    
-    .fixed-title h2 {
-      margin: 0 auto;
-      padding: 1em;
-      font-size: 2.5rem;
-      background: #004d66;
-      color: #fff;
-      max-width: 800px;
-      letter-spacing: 1px;
-      border-radius: 8px;
-    }
-    
     .timeline {
       position: relative;
       max-width: 1200px;
@@ -211,34 +117,35 @@
     }
 
     .timeline-hover .timeline-image {
-  position: fixed;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  opacity: 0;
-  z-index: 1000;
-  transition: opacity 0.3s ease;
-  display: block;
-  pointer-events: none;
-}
+      position: fixed;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0;
+      z-index: 1000;
+      transition: opacity 0.3s ease;
+      display: block;
+      pointer-events: none;
+    }
 
     .timeline-hover:hover .timeline-image {
-  opacity: 1;
-}
+      opacity: 1;
+    }
 
-  section {
-          padding: 2rem 1rem; /* Adjust side padding */
-          margin: 0 auto;
-          margin-left: 4rem; /* Increase left margin */
-          margin-right: 4rem; /* Increase right margin */
-      } 
-      footer {
-          text-align: center;
-          padding: 10px 0;
-          background: #333;
-          color: #fff;
-      }
+    section {
+      padding: 2rem 1rem;
+      margin: 0 auto;
+      margin-left: 4rem;
+      margin-right: 4rem;
+    }
+
+    footer {
+      text-align: center;
+      padding: 10px 0;
+      background: #333;
+      color: #fff;
+    }
 
     @media screen and (max-width: 768px) {
       .timeline::after {
@@ -282,129 +189,124 @@
   </script>
 </head>
 <body>
-   <div id="header-container" style="min-height: 250px; position: fixed; top: 0; left: 0; right: 0; z-index: 999;"></div>
+  <!-- Load external header -->
+  <div id="header-container" style="position: fixed; top: 0; left: 0; right: 0; z-index: 999;"></div>
 
+  <script>
+    fetch("header.html")
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById("header-container").innerHTML = data;
+        document.body.style.visibility = "visible";
+      });
+  </script>
 
+  <!-- Push main content below fixed header and nav -->
+  <div style="height: 260px;"></div>
 
-    <script>
-      fetch("header.html")
-        .then(response => response.text())
-        .then(data => {
-          document.getElementById("header-container").innerHTML = data;
-          document.body.style.visibility = "visible";
-        });
-    </script>
-
-   <section>
-
-<div class="fixed-title">
   <h2><span class="hourglass">⏳</span> Roots, Roads & Research</h2>
-</div>
 
-<div style="margin-top: 360px;"></div> <!-- or more if needed -->
+  <section>
+    <div class="timeline">
 
-
-  <div class="timeline">
-
-    <div class="timeline-block left">
-      <div class="timeline-hover">
-        <div class="timeline-content">
-          <div class="timeline-year">Root</div>
-          <h3>Taplejung, Nepal</h3>
-          <p>Origin of our family, nestled in the Himalayas.</p>
-          <img src="images/taplejung.jpg" alt="Taplejung" class="timeline-image" loading="lazy">
+      <div class="timeline-block left">
+        <div class="timeline-hover">
+          <div class="timeline-content">
+            <div class="timeline-year">Root</div>
+            <h3>Taplejung, Nepal</h3>
+            <p>Origin of our family, nestled in the Himalayas.</p>
+            <img src="images/taplejung.jpg" alt="Taplejung" class="timeline-image" loading="lazy">
+          </div>
         </div>
       </div>
-    </div>
 
-    <div class="timeline-block right">
-      <div class="timeline-hover">
-        <div class="timeline-content">
-          <div class="timeline-year">Early Childhood</div>
-          <h3>Biratnagar, Nepal</h3>
-          <p>High school years — where my passion for science began.</p>
-          <img src="images/biratnagar.jpg" alt="Biratnagar" class="timeline-image" loading="lazy">
+      <div class="timeline-block right">
+        <div class="timeline-hover">
+          <div class="timeline-content">
+            <div class="timeline-year">Early Childhood</div>
+            <h3>Biratnagar, Nepal</h3>
+            <p>High school years — where my passion for science began.</p>
+            <img src="images/biratnagar.jpg" alt="Biratnagar" class="timeline-image" loading="lazy">
+          </div>
         </div>
       </div>
-    </div>
 
-    <div class="timeline-block left">
-      <div class="timeline-hover">
-        <div class="timeline-content">
-          <div class="timeline-year">2007–2015</div>
-          <h3>Kathmandu, Nepal</h3>
-          <p>Undergraduate and master's degrees, and began my early research experiences in atmospheric science.</p>
-          <img src="images/kathmandu.jpg" alt="Kathmandu" class="timeline-image" loading="lazy">
+      <div class="timeline-block left">
+        <div class="timeline-hover">
+          <div class="timeline-content">
+            <div class="timeline-year">2007–2015</div>
+            <h3>Kathmandu, Nepal</h3>
+            <p>Undergraduate and master's degrees, and began my early research experiences in atmospheric science.</p>
+            <img src="images/kathmandu.jpg" alt="Kathmandu" class="timeline-image" loading="lazy">
+          </div>
         </div>
       </div>
-    </div>
 
-    <div class="timeline-block right">
-      <div class="timeline-hover">
-        <div class="timeline-content">
-          <div class="timeline-year">2012</div>
-          <h3>Whitewater Rafting, Trishuli River, Nepal</h3>
-          <p>Conquered the rapids — an unforgettable water adventure.</p>
-          <img src="images/rafting.jpg" alt="Rafting" class="timeline-image" loading="lazy">
+      <div class="timeline-block right">
+        <div class="timeline-hover">
+          <div class="timeline-content">
+            <div class="timeline-year">2012</div>
+            <h3>Whitewater Rafting, Trishuli River, Nepal</h3>
+            <p>Conquered the rapids — an unforgettable water adventure.</p>
+            <img src="images/rafting.jpg" alt="Rafting" class="timeline-image" loading="lazy">
+          </div>
         </div>
       </div>
-    </div>
 
-    <div class="timeline-block left">
-      <div class="timeline-hover">
-        <div class="timeline-content">
-          <div class="timeline-year">2015–2022</div>
-          <h3>Reno, NV, USA</h3>
-          <p>Graduate studies in atmospheric science.
-            <ul>
-              <li><strong>2017</strong>: MS in Atmospheric Science, UNR</li>
-              <li><strong>2022</strong>: PhD in Atmospheric Science, UNR</li>
-            </ul>
-          </p>
-          <img src="images/reno.jpg" alt="Reno" class="timeline-image" loading="lazy">
+      <div class="timeline-block left">
+        <div class="timeline-hover">
+          <div class="timeline-content">
+            <div class="timeline-year">2015–2022</div>
+            <h3>Reno, NV, USA</h3>
+            <p>Graduate studies in atmospheric science.
+              <ul>
+                <li><strong>2017</strong>: MS in Atmospheric Science, UNR</li>
+                <li><strong>2022</strong>: PhD in Atmospheric Science, UNR</li>
+              </ul>
+            </p>
+            <img src="images/reno.jpg" alt="Reno" class="timeline-image" loading="lazy">
+          </div>
         </div>
       </div>
-    </div>
 
-    <div class="timeline-block right">
-      <div class="timeline-hover">
-        <div class="timeline-content">
-          <div class="timeline-year">2018</div>
-          <h3>Skydiving, Lake Tahoe</h3>
-          <p>Jumped from 13,000 ft. — the world looked so different from above.</p>
-          <img src="images/skydive.jpg" alt="Skydiving" class="timeline-image" loading="lazy">
+      <div class="timeline-block right">
+        <div class="timeline-hover">
+          <div class="timeline-content">
+            <div class="timeline-year">2018</div>
+            <h3>Skydiving, Lake Tahoe</h3>
+            <p>Jumped from 13,000 ft. — the world looked so different from above.</p>
+            <img src="images/skydive.jpg" alt="Skydiving" class="timeline-image" loading="lazy">
+          </div>
         </div>
       </div>
-    </div>
 
-    <div class="timeline-block left">
-      <div class="timeline-hover">
-        <div class="timeline-content">
-          <div class="timeline-year">2023–Present</div>
-          <h3>Laramie, Wyoming</h3>
-          <p>Currently working on regional climate modeling as a postdoc.</p>
-          <img src="images/laramie.jpg" alt="Laramie" class="timeline-image" loading="lazy">
+      <div class="timeline-block left">
+        <div class="timeline-hover">
+          <div class="timeline-content">
+            <div class="timeline-year">2023–Present</div>
+            <h3>Laramie, Wyoming</h3>
+            <p>Currently working on regional climate modeling as a postdoc.</p>
+            <img src="images/laramie.jpg" alt="Laramie" class="timeline-image" loading="lazy">
+          </div>
         </div>
       </div>
-    </div>
 
-    <div class="timeline-block right">
-      <div class="timeline-hover">
-        <div class="timeline-content">
-          <div class="timeline-year">2025</div>
-          <h3>Bungee Jump, Kushma, Nepal</h3>
-          <p>Jumped off a bridge (750ft) over a Kaligandaki river gorge — pure adrenaline!</p>
-          <img src="images/bungee.JPG" alt="Bungee Jump" class="timeline-image" loading="lazy">
+      <div class="timeline-block right">
+        <div class="timeline-hover">
+          <div class="timeline-content">
+            <div class="timeline-year">2025</div>
+            <h3>Bungee Jump, Kushma, Nepal</h3>
+            <p>Jumped off a bridge (750ft) over a Kaligandaki river gorge — pure adrenaline!</p>
+            <img src="images/bungee.JPG" alt="Bungee Jump" class="timeline-image" loading="lazy">
+          </div>
         </div>
       </div>
+
     </div>
+  </section>
 
-  </div>
-
- </section>
-    <footer>
-        <p>&copy;2025 Pramod Adhikari | Hosted by GitHub Pages</p>
-    </footer>
+  <footer>
+    <p>&copy;2025 Pramod Adhikari | Hosted by GitHub Pages</p>
+  </footer>
 </body>
 </html>
-
