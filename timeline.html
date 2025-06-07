@@ -71,6 +71,35 @@
             color: #f8f9f9;
         }
 
+    nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            padding: 10px 0; /* Increase padding for a larger bar */
+            margin: 0;
+            background-color: #2e86c1; /* Add a background color */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add a shadow for a sleek look */
+            border-radius: 8px; /* Add slight rounding to the edges */
+        }
+
+        nav ul li {
+            margin: 0 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #fff; /* Change font color to white */
+            font-weight: bold;
+            font-size: 1.2rem; /* Increase font size */
+            padding: 10px 15px; /* Add padding for larger clickable area */
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        nav ul li a:hover {
+            background-color: #0056b3; /* Change background color on hover */
+        }
+
     .hourglass {
       display: inline-block;
       animation: rotate 2s linear infinite;
