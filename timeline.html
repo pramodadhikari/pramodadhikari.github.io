@@ -111,6 +111,25 @@
       100% { transform: rotate(360deg); }
     }
 
+    .fixed-title {
+        position: fixed;
+        top: 250px; /* Adjust based on the combined height of your header + nav */
+        width: 100%;
+        text-align: center;
+        z-index: 998; /* Below the header but above timeline */
+      }
+      
+      .fixed-title h2 {
+        margin: 0 auto;
+        padding: 1em;
+        font-size: 2.5rem;
+        background: #004d66;
+        color: #fff;
+        max-width: 800px;
+        letter-spacing: 1px;
+        border-radius: 8px;
+      }
+    
     .timeline {
       position: relative;
       max-width: 1200px;
@@ -265,7 +284,7 @@
 <body>
    <div id="header-container" style="min-height: 250px; position: fixed; top: 0; left: 0; right: 0; z-index: 999;"></div>
 
- <div style="margin-top: 400px;"></div> <!-- push timeline content below fixed header -->
+ <div style="margin-top: 360px;"></div> <!-- push timeline content below fixed header -->
 
     <script>
       fetch("header.html")
@@ -278,7 +297,9 @@
 
    <section>
 
+ <div class="fixed-title">
   <h2><span class="hourglass">⏳</span> Roots, Roads & Research</h2>
+</div>
 
 
   <div class="timeline">
