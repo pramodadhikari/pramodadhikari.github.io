@@ -172,6 +172,17 @@
   </script>
 </head>
 <body>
+    <div id="header-container" style="min-height: 250px; position: fixed; top: 0; left: 0; right: 0; z-index: 999;"></div>
+<div style="height: 250px;"></div>
+
+    <script>
+      fetch("header.html")
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById("header-container").innerHTML = data;
+          document.body.style.visibility = "visible";
+        });
+    </script>
 
   <h2><span class="hourglass">⏳</span> Roots, Roads & Research</h2>
 
