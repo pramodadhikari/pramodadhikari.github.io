@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interactive Timeline - Pramod Adhikari</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to bottom, #0e2f44 0%, #1d1f27 100%);
+      margin: 0;
+      padding: 0;
+    }
+
+    h2 {
+      text-align: center;
+      padding: 1em;
+      font-size: 2.5rem;
+      background: #004d66;
+      color: #fff;
+      margin: 0;
+      letter-spacing: 1px;
+    }
+
+    .hourglass {
+      display: inline-block;
+      animation: rotate 2s linear infinite;
+    }
+
+    @keyframes rotate {
+      0% { transform: rotate(0deg); }
+      50% { transform: rotate(180deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+    .timeline {
+      position: relative;
+      max-width: 1200px;
+      margin: 2em auto;
+    }
+
+    .timeline::after {
+      content: '';
+      position: absolute;
+      width: 6px;
+      background-color: #00cfff;
+      top: 0;
+      bottom: 0;
+      left: 50%;
+      margin-left: -3px;
+    }
+
+    .timeline-block {
+      position: relative;
+      width: 50%;
+      padding: 2em;
+      box-sizing: border-box;
+      color: #fff;
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all 0.6s ease-out;
+    }
+
+    .timeline-block.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .timeline-block.left {
+      left: 0;
+    }
+
+    .timeline-block.right {
+      left: 50%;
+    }
+
+    .timeline-block::before {
+      content: '';
+      position: absolute;
+      top: 15px;
+      width: 20px;
+      height: 20px;
+      background-color: #00cfff;
+      border: 4px solid #fff;
+      border-radius: 50%;
+      z-index: 1;
+    }
+
+    .timeline-block.left::before {
+      right: -10px;
+    }
+
+    .timeline-block.right::before {
+      left: -10px;
+    }
+
+    .timeline-content {
+      background: #1b1e24;
+      padding: 1em;
+      border-radius: 10px;
+      position: relative;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+    }
+
+    .timeline-year {
+      color: orange;
+      font-size: 1.5rem;
+      font-weight: bold;
+      margin-bottom: 0.5em;
+    }
+
+    .timeline-hover {
+      position: relative;
+    }
+
+    .timeline-hover .timeline-image {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  z-index: 1000;
+  transition: opacity 0.3s ease;
+  display: block;
+  pointer-events: none;
+}
+
+    .timeline-hover:hover .timeline-image {
+  opacity: 1;
+}
+
+    @media screen and (max-width: 768px) {
+      .timeline::after {
+        left: 20px;
+      }
+
+      .timeline-block {
+        width: 100%;
+        padding-left: 40px;
+        padding-right: 25px;
+      }
+
+      .timeline-block.right {
+        left: 0;
+      }
+
+      .timeline-block.left::before,
+      .timeline-block.right::before {
+        left: 10px;
+      }
+
+      .timeline-block.left .timeline-content,
+      .timeline-block.right .timeline-content {
+        margin: 0;
+      }
+    }
+  </style>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const blocks = document.querySelectorAll(".timeline-block");
+      const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+          }
+        });
+      }, { threshold: 0.1 });
+
+      blocks.forEach(block => observer.observe(block));
+    });
+  </script>
+</head>
+<body>
+
+  <h2><span class="hourglass">⏳</span> Roots, Roads & Research</h2>
+
+
+  <div class="timeline">
+
+    <div class="timeline-block left">
+      <div class="timeline-hover">
+        <div class="timeline-content">
+          <div class="timeline-year">Root</div>
+          <h3>Taplejung, Nepal</h3>
+          <p>Origin of our family, nestled in the Himalayas.</p>
+          <img src="images/taplejung.jpg" alt="Taplejung" class="timeline-image" loading="lazy">
+        </div>
+      </div>
+    </div>
+
+    <div class="timeline-block right">
+      <div class="timeline-hover">
+        <div class="timeline-content">
+          <div class="timeline-year">Early Childhood</div>
+          <h3>Biratnagar, Nepal</h3>
+          <p>High school years — where my passion for science began.</p>
+          <img src="images/biratnagar.jpg" alt="Biratnagar" class="timeline-image" loading="lazy">
+        </div>
+      </div>
+    </div>
+
+    <div class="timeline-block left">
+      <div class="timeline-hover">
+        <div class="timeline-content">
+          <div class="timeline-year">2007–2015</div>
+          <h3>Kathmandu, Nepal</h3>
+          <p>Undergraduate and master's degrees, and began my early research experiences in atmospheric science.</p>
+          <img src="images/kathmandu.jpg" alt="Kathmandu" class="timeline-image" loading="lazy">
+        </div>
+      </div>
+    </div>
+
+    <div class="timeline-block right">
+      <div class="timeline-hover">
+        <div class="timeline-content">
+          <div class="timeline-year">2012</div>
+          <h3>Whitewater Rafting, Trishuli River, Nepal</h3>
+          <p>Conquered the rapids — an unforgettable water adventure.</p>
+          <img src="images/rafting.jpg" alt="Rafting" class="timeline-image" loading="lazy">
+        </div>
+      </div>
+    </div>
+
+    <div class="timeline-block left">
+      <div class="timeline-hover">
+        <div class="timeline-content">
+          <div class="timeline-year">2015–2022</div>
+          <h3>Reno, NV, USA</h3>
+          <p>Graduate studies in atmospheric science.
+            <ul>
+              <li><strong>2017</strong>: MS in Atmospheric Science, UNR</li>
+              <li><strong>2022</strong>: PhD in Atmospheric Science, UNR</li>
+            </ul>
+          </p>
+          <img src="images/reno.jpg" alt="Reno" class="timeline-image" loading="lazy">
+        </div>
+      </div>
+    </div>
+
+    <div class="timeline-block right">
+      <div class="timeline-hover">
+        <div class="timeline-content">
+          <div class="timeline-year">2018</div>
+          <h3>Skydiving, Lake Tahoe</h3>
+          <p>Jumped from 13,000 ft. — the world looked so different from above.</p>
+          <img src="images/skydive.jpg" alt="Skydiving" class="timeline-image" loading="lazy">
+        </div>
+      </div>
+    </div>
+
+    <div class="timeline-block left">
+      <div class="timeline-hover">
+        <div class="timeline-content">
+          <div class="timeline-year">2023–Present</div>
+          <h3>Laramie, Wyoming</h3>
+          <p>Currently working on regional climate modeling as a postdoc.</p>
+          <img src="images/laramie.jpg" alt="Laramie" class="timeline-image" loading="lazy">
+        </div>
+      </div>
+    </div>
+
+    <div class="timeline-block right">
+      <div class="timeline-hover">
+        <div class="timeline-content">
+          <div class="timeline-year">2025</div>
+          <h3>Bungee Jump, Kushma, Nepal</h3>
+          <p>Jumped off a bridge (750ft) over a Kaligandaki river gorge — pure adrenaline!</p>
+          <img src="images/bungee.JPG" alt="Bungee Jump" class="timeline-image" loading="lazy">
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</body>
+</html>
