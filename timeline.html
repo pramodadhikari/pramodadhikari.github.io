@@ -22,6 +22,18 @@
       letter-spacing: 1px;
     }
 
+    header {
+            background: url('images/website_background_image.jpeg') no-repeat center center/cover;
+            color: #fff;
+            text-align: center;
+            padding-top: 190px;
+            padding-bottom: 10px;
+            position: relative;
+            height: 200px;
+        }
+
+    
+
     .hourglass {
       display: inline-block;
       animation: rotate 2s linear infinite;
@@ -130,6 +142,19 @@
   opacity: 1;
 }
 
+  section {
+          padding: 2rem 1rem; /* Adjust side padding */
+          margin: 0 auto;
+          margin-left: 4rem; /* Increase left margin */
+          margin-right: 4rem; /* Increase right margin */
+      } 
+      footer {
+          text-align: center;
+          padding: 10px 0;
+          background: #333;
+          color: #fff;
+      }
+
     @media screen and (max-width: 768px) {
       .timeline::after {
         left: 20px;
@@ -172,7 +197,7 @@
   </script>
 </head>
 <body>
-    <div id="header-container" style="min-height: 250px; position: fixed; top: 0; left: 0; right: 0; z-index: 999;"></div>
+   <div id="header-container" style="min-height: 250px; position: fixed; top: 0; left: 0; right: 0; z-index: 999;"></div>
 <div style="height: 250px;"></div>
 
     <script>
@@ -183,6 +208,8 @@
           document.body.style.visibility = "visible";
         });
     </script>
+
+   <section>
 
   <h2><span class="hourglass">⏳</span> Roots, Roads & Research</h2>
 
@@ -284,6 +311,10 @@
 
   </div>
 
+ </section>
+    <footer>
+        <p>&copy;2025 Pramod Adhikari | Hosted by GitHub Pages</p>
+    </footer>
 </body>
 </html>
 
