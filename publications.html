@@ -92,15 +92,15 @@
         }
 
 	ol.reversed-bracketed {
-	    list-style: none;
-	    counter-reset: item 11; /* One more than start value */
-	    padding-left: 1.5em;
+    list-style: none;
+    counter-reset: item 0;
+    padding-left: 1.5em;
 	}
 	
 	ol.reversed-bracketed li {
-	    counter-increment: item -1;
+	    counter-increment: item;
 	    position: relative;
-	    padding-left: 3.5em; /* Creates space so text doesn't overlap number */
+	    padding-left: 3.5em;
 	    margin-bottom: 1rem;
 	    font-size: 1.1rem;
 	    line-height: 1.6;
@@ -110,8 +110,7 @@
 	    content: "[" counter(item) "].";
 	    position: absolute;
 	    left: 0;
-	    
-	    width: 3em; /* Adds spacing between number and text */
+	    width: 3em;
 	    display: inline-block;
 	}
 
@@ -160,7 +159,7 @@
     </script>
     <section>
         <h2>Publications</h2>
-	<ol class="reversed-bracketed" start="11">
+	<ol class="reversed-bracketed" >
       		<li> <b>Adhikari, P.</b>, Geerts, B., Rahimi-Esfarjani, S., Rasmussen, K.,  Quam, M.,and Huhn B. (2026) Charting Resilience at Rocky Mountain Ski Areas as Winters Shrink. Nature Partner Journals Climate and Atmospheric science (in review) </li> 
             <li> <b>Adhikari, P.</b>, Geerts, B., Rahimi-Esfarjani, S., Xue, L., Rasmussen, K.,  Smith K., Gutmann E., Schneider T.L., Dudhia, J. (2026) A 1.33 km resolution climate reconstruction and climate change outlook over the Rocky Mountain Region. Journal of Applied Meteorology and Climatology (in review) </li> 
 	    	<li>  Smith K., Geerts, B., <b>Adhikari, P.</b>, Day K., Rahimi S., Shuman B., Xue L., and Schneider T. (2025) Evaluation of CONUS404 cold-season precipitation and snowpack over the mountainous western United States. <a href = "https://doi.org/10.1175/JHM-D-25-0125.1"> Journal of Hydrometeorology </a></li> 
