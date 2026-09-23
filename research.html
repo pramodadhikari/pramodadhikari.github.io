@@ -1,167 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Research - Pramod Adhikari</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            line-height: 1.6;
-            background-color: #f4f4f9;
-            visibility:hidden;
-        }
-       header {
-            background: url('images/website_background_image.jpeg') no-repeat center center/cover;
-            color: #fff;
-            text-align: center;
-            padding-top: 190px;
-            padding-bottom: 10px;
-            position: relative;
-            height: 200px;
-            filter: grayscale(100%);
-        }
-       header h1 {
-            font-size: 3rem;
-            margin: 0;
-        }
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Research | Pramod Adhikari</title><meta name="description" content="Pramod Adhikari, PhD. Atmospheric scientist at the University of Wyoming researching mountain climate, regional Earth system modeling, and climate extremes."><meta name="theme-color" content="#173e40"><link rel="stylesheet" href="assets/site.css"><script src="assets/site.js" defer></script></head>
+<body><a class="skip" href="#main">Skip to content</a><header class="site-header"><div class="nav-wrap"><a class="brand" href="index.html"><img class="brand-photo" src="images/personal_photo.jpeg" alt="" width="48" height="48"><span>Pramod Adhikari<small>ATMOSPHERIC SCIENTIST</small></span></a><button class="menu-toggle" aria-expanded="false" aria-controls="navigation" hidden>Menu <span aria-hidden="true">☰</span></button><nav id="navigation" aria-label="Main navigation"><a href="index.html">Home</a><a href="research.html" aria-current="page">Research</a><a href="publications.html">Publications</a><a href="cv.html">CV</a><a href="media.html">Outreach & media</a><a href="contact.html">Contact</a></nav></div></header>
+<main id="main"><div class="page-intro wrap"><p class="eyebrow">RESEARCH</p><h1>Mountains in a changing climate.</h1><p class="lede">Connecting atmospheric processes, regional climate simulations, and actionable information.</p></div><section class="wrap research-hub" aria-label="Research directions"><div class="cards"><a class="research-card" href="regional-modeling.html"><span class="card-number">01 / MODELING</span><h3>Regional Earth<br>system modeling</h3><p>Developing RM1.3: 70 years of Rocky Mountain climate at 1.33 km, supported by high-performance computing.</p><span class="card-arrow">↗</span></a><a class="research-card" href="climate-extremes.html"><span class="card-number">02 / HYDROCLIMATE</span><h3>Climate extremes &<br>mountain water</h3><p>Assessing precipitation extremes at global warming levels and snow security at Rocky Mountain ski areas.</p><span class="card-arrow">↗</span></a><a class="research-card" href="clouds-aerosols.html"><span class="card-number">03 / ATMOSPHERIC PROCESSES</span><h3>Clouds & aerosols<br>over the Himalayas</h3><p>My PhD research on aerosol effects on clouds, precipitation, and freezing levels over complex Himalayan terrain.</p><span class="card-arrow">↗</span></a></div></section><div class="wrap prose"><section id="research">
 
-        header p {
-            font-size: 1.5rem;
-            margin: 10px 0;
-        }
-        .social-icons {
-            margin: 50px 0;
-        }
-
-        .social-icons a {
-            color: #fff;
-            margin: 0 10px;
-            font-size: 1.5rem;
-            text-decoration: none;
-        }
-
-        .social-icons {
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-            margin-top: 15px;
-        }
-
-        .social-icons a {
-            color: #fff;
-            font-size: 2rem;
-            text-decoration: none;
-            transition: transform 0.3s ease, color 0.3s ease;
-        }
-
-        .social-icons a:hover {
-            transform: scale(1.3);
-            color: #f8f9f9;
-        }
-         nav ul {
-            display: flex;
-            justify-content: center;
-            list-style: none;
-            padding: 10px 0; /* Increase padding for a larger bar */
-            margin: 0;
-            background-color: #36454F; /* Add a background color */
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add a shadow for a sleek look */
-            border-radius: 8px; /* Add slight rounding to the edges */
-        }
-
-        nav ul li {
-            margin: 0 20px;
-        }
-
-        nav ul li a {
-            text-decoration: none;
-            color: #fff; /* Change font color to white */
-            font-weight: bold;
-            font-size: 1.2rem; /* Increase font size */
-            padding: 10px 15px; /* Add padding for larger clickable area */
-            border-radius: 5px;
-            transition: background-color 0.3s;
-        }
-
-        nav ul li a:hover {
-            background-color: #6082B6;; /* Change background color on hover */
-        }
-
-        section {
-            padding: 2rem 1rem; /* Adjust side padding */
-            margin: 0 auto;
-            margin-left: 4rem; /* Increase left margin */
-            margin-right: 4rem; /* Increase right margin */
-        }
-        #plain-language-summary {
-            display: flex;
-            flex-wrap: nowrap; /* Keep elements side-by-side on large screens */
-            gap: 20px; /* Add space between the image and text */
-            align-items: flex-start; /* Align items at the top */
-            margin-top: 20px;
-        }
-        
-        #plain-language-summary img {
-            max-width: 50%; /* Limit size for larger screens */
-            height: auto;
-            flex-shrink: 0; /* Prevent the image from shrinking too much */
-        }
-        #plain-language-summary div {
-            flex: 1;
-            text-align: justify;
-        }
-        footer {
-            text-align: center;
-            padding: 10px 0;
-            background: #333;
-            color: #fff;
-        }
-        @media (max-width: 768px) {
-            header h1 {
-                font-size: 2rem;
-            }
-            header p {
-                font-size: 1rem;
-            }
-            .social-icons a {
-                font-size: 1rem;
-            }
-            nav ul {
-                flex-direction: column;
-                padding: 0;
-            }
-            nav ul li {
-                margin: 5px 0;
-            }
-            #plain-language-summary {
-                flex-direction: column; /* Stack elements vertically */
-                align-items: center;    /* Center-align content */
-            }
-            #plain-language-summary img {
-                max-width: 90%; /* Adjust the width for better fit */
-            }
-
-        }
-    </style>
-</head>
-<body>
-    <div id="header-container" style="min-height: 250px;"></div>
-
-    <script>
-      fetch("header.html")
-        .then(response => response.text())
-        .then(data => {
-          document.getElementById("header-container").innerHTML = data;
-          document.body.style.visibility = "visible";
-        });
-    </script>
-        <!-- Research Section -->
-    <section id="research">
-        <h2>Research</h2>
         <ul>
             <li> Regional Earth System modeling and dynamically downscaling climate models</li>
             <li> Impact of warming climate on water availability and mountain Hydroclimate </li>
@@ -176,11 +17,11 @@
             <li>Led end-to-end development of high-resolution regional Earth system modeling project (70+ years at 1.3 km resolution) from conception through execution. Prepared model setup, designed simulation and automated workflows, performed parallel computing, and managed large-scale data (~PB). Conducted model evaluation and data analysis and collaborated with multidisciplinary teams to produce high-quality datasets that enabled multiple peer-reviewed publications and stakeholder-focused applications.</li>
             <li>Utilize high-resolution regional climate models to dynamically downscale global climate simulations, enhancing predictive understanding of warming on water availability and human-environment systems in the Interior Western U.S.</li>
             <li>Conduct retrospective performance assessments of downscaled GCMs to establish reliability for local and regional climate impact studies.</li>
-            <li>Contribute modeling and analyses to decision-support tools, including the WyACT web Portal <a href = "https://wyadapt.org/" target="_blank" >(WY-Adapt)</a> and the contributing author to Snake River Headwaters Futures Assessment (in preparation) and Colorado Climate Roadmap (in preparation), informing extreme event projection and adaptation planning.</li>
-         
+            <li>Contribute modeling and analyses to decision-support tools, including the WyACT web Portal <a href = "https://wyadapt.org/" target="_blank" rel="noopener noreferrer" >(WY-Adapt)</a> and the contributing author to Snake River Headwaters Futures Assessment (in preparation) and Colorado Climate Roadmap (in preparation), informing extreme event projection and adaptation planning.</li>
+
             </ul>
         </div>
-        
+
         <h3>Plain Language Summary of my Ph.D. research</h3>
         <div id="plain-language-summary">
             <img src="images/graphical_abstract_phd.png" alt="Graphical Abstract">
@@ -190,10 +31,5 @@
                 </p>
             </div>
         </div>
-        
-    </section>
-    <footer>
-        <p>&copy;2025 Pramod Adhikari | Hosted by GitHub Pages</p>
-    </footer>
-</body>
-</html>
+
+    </section></div></main><footer><div class="footer-inner"><div><a class="footer-name" href="index.html">Pramod Adhikari, PhD</a><p>Atmospheric science · Mountain climate · Earth systems</p></div><div class="social"><a href="https://scholar.google.com/citations?user=QLI8ZaMAAAAJ&amp;hl=en">Google Scholar ↗</a><a href="https://orcid.org/0000-0001-8614-2461">ORCID ↗</a><a href="https://github.com/pramodadhikari">GitHub ↗</a><a href="https://www.linkedin.com/in/pramod-adhikari-ph-d-773a276a/">LinkedIn ↗</a><a href="https://www.researchgate.net/profile/Pramod-Adhikari">ResearchGate ↗</a></div></div><div class="footer-bottom"><span>© 2026 Pramod Adhikari</span><span>University of Wyoming · Laramie, WY</span></div></footer></body></html>
