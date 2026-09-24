@@ -108,17 +108,16 @@ nav a.section-active{border-color:var(--teal);font-weight:600}
  .js .menu-toggle{padding:9px;font-size:15px;gap:7px}
 }
 
-.brand-photo {
+.site-header .brand-photo {
   width: 72px;
   height: 72px;
-  flex-basis: 72px;
+  flex: 0 0 72px;
 }
 
-/* Keep the header compact on phones */
 @media (max-width: 800px) {
-  .brand-photo {
+  .site-header .brand-photo {
     width: 48px;
     height: 48px;
-    flex-basis: 48px;
+    flex: 0 0 48px;
   }
 }
