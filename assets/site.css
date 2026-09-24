@@ -109,9 +109,9 @@ nav a.section-active{border-color:var(--teal);font-weight:600}
 }
 
 .site-header .brand-photo {
-  width: 72px;
-  height: 72px;
-  flex: 0 0 72px;
+  width: 96px;
+  height: 96px;
+  flex: 0 0 96px;
 }
 
 @media (max-width: 800px) {
