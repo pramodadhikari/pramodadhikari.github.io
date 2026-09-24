@@ -16,7 +16,7 @@ From this directory run `python3 -m http.server 8080`, then visit http://localho
 - `assets/site.js`: accessible mobile navigation. Content and navigation remain available without JavaScript.
 - `cv/Adhikari_CV.pdf`: linked downloadable CV.
 
-Navigation and footer markup are included directly in each page so page rendering does not depend on a network request or JavaScript. Update all ten pages when changing shared navigation or profile links.
+Navigation markup is included directly in each page. The shared `footer.html` is loaded by `assets/site.js` on all ten redesigned pages. Edit `footer.html` once to update every footer. Preview through an HTTP server; a basic contact footer remains visible if JavaScript or the footer request is unavailable.
 
 The existing `header.html`, `timeline.html`, and `timeline_copy.html` are legacy pages, outside the main navigation, and have not been redesigned.
 
